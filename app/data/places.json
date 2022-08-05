@@ -1,18 +1,28 @@
-[
-  {
-    "id": "ChIJRw4lvtdt5kcRMaNDIjxzjKE",
-    "name": "Berliner Kebab"
-  },
-  {
-    "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
-    "name": "Colette"
-  },
-  {
-    "id": "ChIJa9gFWblt5kcRo7Q5mXXaIZE",
-    "name": "Piscine Yvonne Godard"
-  },
-  {
-    "id": "ChIJv5uRh9tt5kcRDYmyEQQpgW8",
-    "name": "Piscine Edouard Pailleron"
-  }
-]
+{
+  "🍔": [
+    {
+      "id": "ChIJRw4lvtdt5kcRMaNDIjxzjKE",
+      "name": "Berliner Kebab"
+    },
+    {
+      "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
+      "name": "Colette"
+    }
+  ],
+  "🏊": [
+    {
+      "id": "ChIJa9gFWblt5kcRo7Q5mXXaIZE",
+      "name": "Piscine Yvonne Godard"
+    },
+    {
+      "id": "ChIJv5uRh9tt5kcRDYmyEQQpgW8",
+      "name": "Piscine Edouard Pailleron"
+    }
+  ],
+  "🍻": [
+    {
+      "id": "ChIJQZTrPcBt5kcR7ALuQw3bZg8",
+      "name": "La fine mousse"
+    }
+  ]
+}

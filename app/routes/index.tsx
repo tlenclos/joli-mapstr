@@ -1,28 +1,73 @@
 import { json, LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
-import { PlacesDetailsResponse } from "~/lib/googleMapSdk";
+import {
+  Container,
+  Heading,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
+import Places from "~/components/Places";
 import placesData from "~/data/places.json";
 import googleMapClient from "~/lib/googleMapClient";
+import { Place } from "~/lib/googleMapSdk";
 
-const today = new Date().getDate();
+type GroupedPlaces = {
+  "🍔": Place[];
+  "🏊": Place[];
+  "🍻": Place[];
+};
+
+async function fetchPlaceIds(ids: string[]) {
+  return (
+    await Promise.all(
+      ids.map((id) =>
+        googleMapClient.maps.placeDetails({
+          place_id: id,
+          // @ts-ignore
+          key: process.env.GOOGLE_API_KEY,
+        })
+      )
+    )
+  )
+    .map((response) => {
+      console.log("request", response.request.path);
+      return response.data.result;
+    })
+    .sort((place1, place2) =>
+      place1.opening_hours?.open_now! > place2.opening_hours?.open_now! ? -1 : 1
+    );
+}
+
+export function headers() {
+  return {
+    "Cache-Control": "max-age=300, s-maxage=3600",
+  };
+}
 
 export async function loader(args: LoaderArgs) {
-  let places: PlacesDetailsResponse[] = [];
+  let places: GroupedPlaces = {
+    "🍔": [],
+    "🍻": [],
+    "🏊": [],
+  };
   let error = false;
 
+  // TODO Add cache system
+  // In production https://www.npmjs.com/package/lru-cache
+  // In dev filesystem
   try {
-    places = (
-      await Promise.all(
-        placesData.map((place) =>
-          googleMapClient.maps.placeDetails({
-            place_id: place.id,
-            // @ts-ignore
-            key: process.env.GOOGLE_API_KEY,
-          })
-        )
-      )
-    ).map((response) => response.data);
+    await Promise.all(
+      ["🍔", "🍻", "🏊"].map(async (category) => {
+        places[category as keyof GroupedPlaces] = await fetchPlaceIds(
+          // @ts-ignore
+          placesData[category].map((placeData) => placeData.id)
+        );
+      })
+    );
   } catch (e) {
     console.error(e);
     error = true;
@@ -33,35 +78,33 @@ export async function loader(args: LoaderArgs) {
 
 export default function Index() {
   const data = useLoaderData<typeof loader>();
+  console.log(data);
 
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Joli Mapstr</h1>
+    <Container maxW={"7xl"} pt={6}>
+      <Heading>Joli Mapstr</Heading>
       {data.error ? (
         <p>Erreur 💥</p>
       ) : (
-        <ul>
-          {data.places.map((place) =>
-            place.result ? (
-              <li key={place.result.place_id}>
-                {place.result.name} - Ouvert:{" "}
-                {place.result.opening_hours?.open_now ? "Oui" : "Non"}
-                <br />
-                <ul>
-                  {place.result.opening_hours?.weekday_text?.map((day, i) => (
-                    <li
-                      key={i}
-                      style={today - 1 === i ? { fontWeight: "bold" } : {}}
-                    >
-                      {day}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ) : null
-          )}
-        </ul>
+        <Tabs pt={6}>
+          <TabList>
+            <Tab>Bouffe 🍔</Tab>
+            <Tab>Bar 🍻</Tab>
+            <Tab>Piscines 🏊</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel p={0} pt={2}>
+              <Places data={data.places["🍔"]} />
+            </TabPanel>
+            <TabPanel p={0} pt={2}>
+              <Places data={data.places["🍻"]} />
+            </TabPanel>
+            <TabPanel p={0} pt={2}>
+              <Places data={data.places["🏊"]} />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
       )}
-    </div>
+    </Container>
   );
 }

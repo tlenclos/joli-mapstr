@@ -7,20 +7,26 @@
     "generate-maps-sdk": "curl https://raw.githubusercontent.com/googlemaps/openapi-specification/main/dist/google-maps-platform-openapi3.json -o swagger-google-maps.json && swagger-typescript-api --axios -p ./swagger-google-maps.json -o ./app/lib -n googleMapSdk.ts && rm swagger-google-maps.json"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.6",
+    "@chakra-ui/react": "^2.2.6",
+    "@emotion/react": "^11",
+    "@emotion/server": "^11",
+    "@emotion/styled": "^11",
     "@remix-run/node": "^1.6.7",
     "@remix-run/react": "^1.6.7",
     "@remix-run/vercel": "^1.6.7",
     "@vercel/node": "^2.4.4",
     "axios": "^0.27.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "framer-motion": "^6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.7",
     "@remix-run/eslint-config": "^1.6.7",
     "@remix-run/serve": "^1.6.7",
-    "@types/react": "^17.0.47",
-    "@types/react-dom": "^17.0.17",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "eslint": "^8.20.0",
     "swagger-typescript-api": "^9.3.1",
     "typescript": "^4.7.4"

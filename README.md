@@ -32,3 +32,8 @@ npm run dev
 Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
 If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+
+## How to add a place
+
+- Open the file with places data https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json
+- Add the place name and id, you can find the place ID here https://developers.google.com/maps/documentation/places/web-service/place-id#find-id
