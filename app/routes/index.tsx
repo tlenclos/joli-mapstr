@@ -37,22 +37,31 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Joli Mapstr</h1>
-      <ul>
-        {data.places.map((place) => (
-          <li key={place.result.place_id}>
-            {place.result.name} - Ouvert:{" "}
-            {place.result.opening_hours?.open_now ? "Oui" : "Non"}
-            <br />
-            <ul>
-              {place.result.opening_hours?.weekday_text?.map((day, i) => (
-                <li style={today - 1 === i ? { fontWeight: "bold" } : {}}>
-                  {day}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      {data.error ? (
+        <p>Erreur 💥</p>
+      ) : (
+        <ul>
+          {data.places.map((place) =>
+            place.result ? (
+              <li key={place.result.place_id}>
+                {place.result.name} - Ouvert:{" "}
+                {place.result.opening_hours?.open_now ? "Oui" : "Non"}
+                <br />
+                <ul>
+                  {place.result.opening_hours?.weekday_text?.map((day, i) => (
+                    <li
+                      key={i}
+                      style={today - 1 === i ? { fontWeight: "bold" } : {}}
+                    >
+                      {day}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : null
+          )}
+        </ul>
+      )}
     </div>
   );
 }
