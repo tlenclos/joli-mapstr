@@ -1,32 +1,57 @@
-{
-  "🍔": [
-    {
-      "id": "ChIJRw4lvtdt5kcRMaNDIjxzjKE",
-      "name": "Berliner Kebab"
-    },
-    {
-      "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
-      "name": "Colette"
-    },
-    {
-      "id": "ChIJyQ_YkvZt5kcR8lpAl35QsyE",
-      "name": "Bon Midi"
-    }
-  ],
-  "🏊": [
-    {
-      "id": "ChIJa9gFWblt5kcRo7Q5mXXaIZE",
-      "name": "Piscine Yvonne Godard"
-    },
-    {
-      "id": "ChIJv5uRh9tt5kcRDYmyEQQpgW8",
-      "name": "Piscine Edouard Pailleron"
-    }
-  ],
-  "🍻": [
-    {
-      "id": "ChIJQZTrPcBt5kcR7ALuQw3bZg8",
-      "name": "La fine mousse"
-    }
-  ]
-}
+[
+  {
+    "name": "Mnomnom 🍔",
+    "places": [
+      {
+        "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
+        "name": "Colette",
+        "url": "https://fr-fr.facebook.com/cantinechezcolette/",
+        "tags": ["Français", "Vegan", "Sandwich"]
+      },
+      {
+        "id": "ChIJyQ_YkvZt5kcR8lpAl35QsyE",
+        "name": "Bon Midi",
+        "tags": ["Vietnamien", "Bobun", "Sandwich"]
+      },
+      {
+        "id": "ChIJ70QC-VNt5kcRX_kCZrMzu50",
+        "name": "Poketea",
+        "tags": ["Bubble tea", "Poké"]
+      },
+      {
+        "id": "ChIJRw4lvtdt5kcRMaNDIjxzjKE",
+        "name": "Berliner Kebab",
+        "tags": ["Kebab"]
+      },
+      {
+        "id": "ChIJUamdgvVt5kcR4iAV_ZdepfM",
+        "name": "Karaage-ya Charonne",
+        "tags": ["Poulet"]
+      }
+    ]
+  },
+  {
+    "name": "Bars 🍻",
+    "places": [
+      {
+        "id": "ChIJQZTrPcBt5kcR7ALuQw3bZg8",
+        "name": "La fine mousse",
+        "tags": ["Craft beer"]
+      }
+    ]
+  },
+
+  {
+    "name": "Piscines 🏊",
+    "places": [
+      {
+        "id": "ChIJa9gFWblt5kcRo7Q5mXXaIZE",
+        "name": "Piscine Yvonne Godard"
+      },
+      {
+        "id": "ChIJv5uRh9tt5kcRDYmyEQQpgW8",
+        "name": "Piscine Edouard Pailleron"
+      }
+    ]
+  }
+]

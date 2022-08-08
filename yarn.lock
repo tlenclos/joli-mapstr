@@ -2225,6 +2225,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/haversine@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@types/haversine/-/haversine-1.1.5.tgz#b839b870b1c3325030dbe55c11b0ce20feabd6cb"
+  integrity sha512-ITIhOBn4tjADEWTfiR3U0ioNRRNOlMJjornJZA/O6pTkvqV69or1Ms0reMNQw3la+wURknlRd1DW+CYUcCvq8A==
+
 "@types/http-cache-semantics@*":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.1.tgz#0ea7b61496902b95890dc4c3a116b60cb8dae812"
@@ -4893,6 +4898,11 @@ hast-util-whitespace@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-2.0.0.tgz#4fc1086467cc1ef5ba20673cb6b03cec3a970f1c"
   integrity sha512-Pkw+xBHuV6xFeJprJe2BBEoDV+AvQySaz3pPDRUs5PNZEMQjpXJJueqrpcHIXxnWTcAGi/UOCgVShlkY6kLoqg==
+
+haversine@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/haversine/-/haversine-1.1.1.tgz#05b65e0445aca8f217b0db56877e4d637d3fc8ae"
+  integrity sha512-KW4MS8+krLIeiw8bF5z532CptG0ZyGGFj0UbKMxx25lKnnJ1hMUbuzQl+PXQjNiDLnl1bOyz23U6hSK10r4guw==
 
 hey-listen@^1.0.8:
   version "1.0.8"

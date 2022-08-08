@@ -2,8 +2,10 @@ import { json, LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 import {
+  Button,
   Container,
   Heading,
+  HStack,
   Tab,
   TabList,
   TabPanel,
@@ -13,15 +15,22 @@ import {
 import Places from "~/components/Places";
 import placesData from "~/data/places.json";
 import googleMapClient from "~/lib/googleMapClient";
-import { Place } from "~/lib/googleMapSdk";
+import { Place as GooglePlace } from "~/lib/googleMapSdk";
 
-type GroupedPlaces = {
-  "🍔": Place[];
-  "🏊": Place[];
-  "🍻": Place[];
+export type ContributedPlace = {
+  id: string;
+  name: string;
+  url?: string;
+  tags?: string[];
+  googleData?: GooglePlace;
 };
 
-async function fetchPlaceIds(ids: string[]) {
+export type GroupedPlaces = Array<{
+  name: string;
+  places: ContributedPlace[];
+}>;
+
+async function fetchPlacesIds(ids: string[]) {
   return (
     await Promise.all(
       ids.map((id) =>
@@ -29,12 +38,12 @@ async function fetchPlaceIds(ids: string[]) {
           place_id: id,
           // @ts-ignore
           key: process.env.GOOGLE_API_KEY,
+          language: "fr",
         })
       )
     )
   )
     .map((response) => {
-      console.log("request", response.request.path);
       return response.data.result;
     })
     .sort((place1, place2) =>
@@ -49,11 +58,7 @@ export function headers() {
 }
 
 export async function loader(args: LoaderArgs) {
-  let places: GroupedPlaces = {
-    "🍔": [],
-    "🍻": [],
-    "🏊": [],
-  };
+  let places: GroupedPlaces = [];
   let error = false;
 
   // TODO Add cache system
@@ -61,11 +66,20 @@ export async function loader(args: LoaderArgs) {
   // In dev filesystem
   try {
     await Promise.all(
-      ["🍔", "🍻", "🏊"].map(async (category) => {
-        places[category as keyof GroupedPlaces] = await fetchPlaceIds(
-          // @ts-ignore
-          placesData[category].map((placeData) => placeData.id)
-        );
+      placesData.map(async (category, index) => {
+        places[index] = {
+          name: category.name,
+          places: await fetchPlacesIds(
+            category.places.map((placeData) => placeData.id)
+          ).then((googlePlaces) => {
+            return category.places.map((place) => ({
+              ...place,
+              googleData: googlePlaces.find(
+                (googlePlace) => googlePlace.place_id === place.id
+              ),
+            }));
+          }),
+        };
       })
     );
   } catch (e) {
@@ -78,30 +92,33 @@ export async function loader(args: LoaderArgs) {
 
 export default function Index() {
   const data = useLoaderData<typeof loader>();
-  console.log(data);
 
   return (
     <Container maxW={"7xl"} pt={6}>
-      <Heading>Joli Mapstr</Heading>
+      <HStack justifyContent="space-between">
+        <Heading>Joli Mapstr</Heading>
+        <Button
+          as="a"
+          href="https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json"
+        >
+          Éditer
+        </Button>
+      </HStack>
       {data.error ? (
         <p>Erreur 💥</p>
       ) : (
         <Tabs pt={6}>
           <TabList>
-            <Tab>Bouffe 🍔</Tab>
-            <Tab>Bar 🍻</Tab>
-            <Tab>Piscines 🏊</Tab>
+            {data.places.map((category) => (
+              <Tab key={category.name}>{category.name}</Tab>
+            ))}
           </TabList>
           <TabPanels>
-            <TabPanel p={0} pt={2}>
-              <Places data={data.places["🍔"]} />
-            </TabPanel>
-            <TabPanel p={0} pt={2}>
-              <Places data={data.places["🍻"]} />
-            </TabPanel>
-            <TabPanel p={0} pt={2}>
-              <Places data={data.places["🏊"]} />
-            </TabPanel>
+            {data.places.map((category) => (
+              <TabPanel p={0} pt={2} key={category.name}>
+                <Places data={category.places} />
+              </TabPanel>
+            ))}
           </TabPanels>
         </Tabs>
       )}
