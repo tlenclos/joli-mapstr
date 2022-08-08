@@ -1,6 +1,5 @@
 import { json, LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-
 import {
   Button,
   Container,
@@ -12,16 +11,20 @@ import {
   TabPanels,
   Tabs,
 } from "@chakra-ui/react";
+import { sortBy } from "lodash";
 import Places from "~/components/Places";
 import placesData from "~/data/places.json";
 import googleMapClient from "~/lib/googleMapClient";
 import { Place as GooglePlace } from "~/lib/googleMapSdk";
+import { distanceFromOffice, timeByFoot } from "~/lib/distance";
 
 export type ContributedPlace = {
   id: string;
   name: string;
   url?: string;
   tags?: string[];
+  distance?: number; // in meters
+  timeByFoot?: number; // in seconds
   googleData?: GooglePlace;
 };
 
@@ -72,12 +75,32 @@ export async function loader(args: LoaderArgs) {
           places: await fetchPlacesIds(
             category.places.map((placeData) => placeData.id)
           ).then((googlePlaces) => {
-            return category.places.map((place) => ({
-              ...place,
-              googleData: googlePlaces.find(
-                (googlePlace) => googlePlace.place_id === place.id
-              ),
-            }));
+            return sortBy<ContributedPlace>(
+              category.places.map((place) => {
+                const googleData = googlePlaces.find(
+                  (googlePlace) => googlePlace.place_id === place.id
+                );
+                const distance =
+                  googleData?.geometry?.location &&
+                  distanceFromOffice({
+                    latitude: googleData?.geometry.location.lat,
+                    longitude: googleData?.geometry.location.lng,
+                  });
+
+                return {
+                  ...place,
+                  distance,
+                  timeByFoot: distance && timeByFoot(distance),
+                  googleData,
+                };
+              }),
+              (item) => {
+                return [
+                  !item.googleData?.opening_hours?.open_now,
+                  item.distance,
+                ];
+              }
+            );
           }),
         };
       })

@@ -19,7 +19,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ContributedPlace } from "~/routes";
-import haversine from "haversine";
 
 const numberdayweek = [6, 0, 1, 2, 3, 4, 5];
 const today = numberdayweek[new Date().getDay()];
@@ -30,14 +29,6 @@ interface Props {
 
 export default function Place({ data }: Props) {
   const website = data.url || data.googleData?.website;
-  const distance = haversine(
-    { latitude: 48.8599078, longitude: 2.3791582 },
-    {
-      latitude: data.googleData?.geometry?.location.lat,
-      longitude: data.googleData?.geometry?.location.lng,
-    },
-    { unit: "meter" }
-  );
 
   return (
     <Center>
@@ -108,9 +99,10 @@ export default function Place({ data }: Props) {
               ))}
             </HStack>
           )}
-          {distance && (
+          {data.distance && (
             <Text>
-              <ArrowForwardIcon mx="2px" /> {distance.toFixed(0)}m
+              <ArrowForwardIcon mx="2px" /> {data.distance.toFixed(0)}m (🚶
+              {data.timeByFoot})
             </Text>
           )}
         </Stack>
