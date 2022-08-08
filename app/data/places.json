@@ -27,6 +27,11 @@
         "id": "ChIJUamdgvVt5kcR4iAV_ZdepfM",
         "name": "Karaage-ya Charonne",
         "tags": ["Poulet"]
+      },
+      {
+        "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
+        "name": "La Cantina",
+        "tags": ["Chilien", "Tapas"]
       }
     ]
   },
@@ -37,6 +42,11 @@
         "id": "ChIJQZTrPcBt5kcR7ALuQw3bZg8",
         "name": "La fine mousse",
         "tags": ["Craft beer"]
+      },
+      {
+        "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
+        "name": "La Cantina",
+        "tags": ["Bière", "Tapas"]
       }
     ]
   },
