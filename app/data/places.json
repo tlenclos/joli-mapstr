@@ -32,6 +32,11 @@
         "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
         "name": "La Cantina",
         "tags": ["Chilien", "Tapas"]
+      },
+      {
+        "id": "ChIJFTliNe5t5kcRE5ffrqvvT4o",
+        "name": "La Comète",
+        "tags": ["Française", "Menu du jour"]
       }
     ]
   },
