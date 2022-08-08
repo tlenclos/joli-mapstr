@@ -32,6 +32,26 @@
         "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
         "name": "La Cantina",
         "tags": ["Chilien", "Tapas"]
+      },
+      {
+        "id": "ChIJ2al2S-Vt5kcRqks8K0L5V28",
+        "name": "PNY",
+        "tags": ["Burger"]
+      },
+      {
+        "id": "ChIJYdb214lt5kcRfewr8U8Iiss",
+        "name": "Impact Berliner Kebap",
+        "tags": ["Kebab"]
+      },
+      {
+        "id": "ChIJy3B2w8Ft5kcRpW1F1uBBn5w",
+        "name": "La maison du Daya",
+        "tags": ["Sandwich", "Poulet"]
+      },
+      {
+        "id": "ChIJLYQbUEZt5kcR82p5YT5bfEo",
+        "name": "Bombolo",
+        "tags": ["Pâtes", "Pizza"]
       }
     ]
   },
