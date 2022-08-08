@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import Place from "~/components/Place";
-import { ContributedPlace } from "~/routes";
+import { ContributedPlace } from "~/lib/fetchPlaces";
 
 interface Props {
   data: ContributedPlace[];
@@ -9,7 +9,9 @@ interface Props {
 const Places = ({ data }: Props) => {
   return (
     <SimpleGrid columns={3} spacing={8}>
-      {data.map((place) => (place ? <Place data={place} /> : null))}
+      {data.map((place) =>
+        place ? <Place data={place} key={place.id} /> : null
+      )}
     </SimpleGrid>
   );
 };

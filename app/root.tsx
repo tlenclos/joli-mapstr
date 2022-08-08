@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { withEmotionCache } from "@emotion/react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import {
   Links,
   LiveReload,
@@ -33,6 +33,19 @@ export let links: LinksFunction = () => {
 interface DocumentProps {
   children: React.ReactNode;
 }
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      ":root": {
+        "--swiper-navigation-color": "#000",
+      },
+      ".swiper-thumbs .swiper-slide": {
+        cursor: "pointer",
+      },
+    },
+  },
+});
 
 const Document = withEmotionCache(
   ({ children }: DocumentProps, emotionCache) => {
@@ -80,7 +93,7 @@ const Document = withEmotionCache(
 export default function App() {
   return (
     <Document>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Outlet />
       </ChakraProvider>
     </Document>

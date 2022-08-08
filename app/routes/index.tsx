@@ -1,110 +1,44 @@
-import { json, LoaderArgs } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
 import {
   Button,
   Container,
   Heading,
-  HStack,
-  Tab,
+  HStack, Tab,
   TabList,
   TabPanel,
   TabPanels,
-  Tabs,
+  Tabs
 } from "@chakra-ui/react";
-import { sortBy } from "lodash";
+import { json, LoaderArgs } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import navigationSwiperCss from "node_modules/swiper/modules/navigation/navigation.min.css";
+import thumbsSwiperCss from "node_modules/swiper/modules/thumbs/thumbs.min.css";
+import zoomSwiperCss from "node_modules/swiper/modules/zoom/zoom.min.css";
+import swiperCss from "node_modules/swiper/swiper.min.css";
+
+import { useState } from "react";
 import Places from "~/components/Places";
-import placesData from "~/data/places.json";
-import googleMapClient from "~/lib/googleMapClient";
-import { Place as GooglePlace } from "~/lib/googleMapSdk";
-import { distanceFromOffice, timeByFoot } from "~/lib/distance";
-
-export type ContributedPlace = {
-  id: string;
-  name: string;
-  url?: string;
-  tags?: string[];
-  distance?: number; // in meters
-  timeByFoot?: number; // in seconds
-  googleData?: GooglePlace;
-};
-
-export type GroupedPlaces = Array<{
-  name: string;
-  places: ContributedPlace[];
-}>;
-
-async function fetchPlacesIds(ids: string[]) {
-  return (
-    await Promise.all(
-      ids.map((id) =>
-        googleMapClient.maps.placeDetails({
-          place_id: id,
-          // @ts-ignore
-          key: process.env.GOOGLE_API_KEY,
-          language: "fr",
-        })
-      )
-    )
-  )
-    .map((response) => {
-      return response.data.result;
-    })
-    .sort((place1, place2) =>
-      place1.opening_hours?.open_now! > place2.opening_hours?.open_now! ? -1 : 1
-    );
-}
+import fetchPlaces, { GroupedPlaces } from "~/lib/fetchPlaces";
 
 export function headers() {
   return {
     "Cache-Control": "max-age=300, s-maxage=3600",
   };
 }
+export const links = () => {
+  return [
+    { rel: "stylesheet", href: swiperCss },
+    { rel: "stylesheet", href: navigationSwiperCss },
+    { rel: "stylesheet", href: zoomSwiperCss },
+    { rel: "stylesheet", href: thumbsSwiperCss },
+  ];
+};
 
 export async function loader(args: LoaderArgs) {
   let places: GroupedPlaces = [];
   let error = false;
 
-  // TODO Add cache system
-  // In production https://www.npmjs.com/package/lru-cache
-  // In dev filesystem
   try {
-    await Promise.all(
-      placesData.map(async (category, index) => {
-        places[index] = {
-          name: category.name,
-          places: await fetchPlacesIds(
-            category.places.map((placeData) => placeData.id)
-          ).then((googlePlaces) => {
-            return sortBy<ContributedPlace>(
-              category.places.map((place) => {
-                const googleData = googlePlaces.find(
-                  (googlePlace) => googlePlace.place_id === place.id
-                );
-                const distance =
-                  googleData?.geometry?.location &&
-                  distanceFromOffice({
-                    latitude: googleData?.geometry.location.lat,
-                    longitude: googleData?.geometry.location.lng,
-                  });
-
-                return {
-                  ...place,
-                  distance,
-                  timeByFoot: distance && timeByFoot(distance),
-                  googleData,
-                };
-              }),
-              (item) => {
-                return [
-                  !item.googleData?.opening_hours?.open_now,
-                  item.distance,
-                ];
-              }
-            );
-          }),
-        };
-      })
-    );
+    places = await fetchPlaces();
   } catch (e) {
     console.error(e);
     error = true;

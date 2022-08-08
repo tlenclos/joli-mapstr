@@ -4,7 +4,8 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "generate-maps-sdk": "curl https://raw.githubusercontent.com/googlemaps/openapi-specification/main/dist/google-maps-platform-openapi3.json -o swagger-google-maps.json && swagger-typescript-api --axios -p ./swagger-google-maps.json -o ./app/lib -n googleMapSdk.ts && rm swagger-google-maps.json"
+    "generate-maps-sdk": "curl https://raw.githubusercontent.com/googlemaps/openapi-specification/main/dist/google-maps-platform-openapi3.json -o swagger-google-maps.json && swagger-typescript-api --axios -p ./swagger-google-maps.json -o ./app/lib -n googleMapSdk.ts && rm swagger-google-maps.json",
+    "populate-places-photos": "ts-node scripts/populatePlacesPhotos.ts"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.6",
@@ -20,7 +21,8 @@
     "framer-motion": "^6",
     "haversine": "^1.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.7",
