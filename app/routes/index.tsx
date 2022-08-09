@@ -56,7 +56,7 @@ export default function Index() {
         <Heading>Joli Mapstr</Heading>
         <Button
           as="a"
-          href="https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json"
+          href="https://github.com/tlenclos/joli-mapstr/edit/master/app/data/places.json"
         >
           Éditer
         </Button>
