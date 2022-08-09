@@ -114,7 +114,8 @@
           "https://lh3.googleusercontent.com/places/AKR5kUgdzLN8vFXzci547vNkpRrtooWDDRjI_-X6j4I2AVaPPEiXdv2SOIFhNqhkiAXDg8d0i4r04jxecf6R0LMsjhriJ9tCwmwwz2c=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUho3iLlufIKcYoHKbxScZoAWfgtVvpMQiZDLFTkJx-7H1mxA6HnVldkCugP-4mY1iyLlQn4WxWiSze5ABX9dwVnXZfShjDgsCQ=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUhN91IoaLGNJCD0i_sO-xN56idM_4-FhH1WJM6zcbXT5FdU6-gjyAgL62toTzPwp2brWxDP_9-2Dq2fVczzGZsLnJ_6ZD--0Xk=s1600-w1000"
-        ]
+        ],
+        "isReportedClosed": true
       },
       {
         "id": "ChIJFTliNe5t5kcRE5ffrqvvT4o",
@@ -249,7 +250,8 @@
           "https://lh3.googleusercontent.com/places/AKR5kUgdzLN8vFXzci547vNkpRrtooWDDRjI_-X6j4I2AVaPPEiXdv2SOIFhNqhkiAXDg8d0i4r04jxecf6R0LMsjhriJ9tCwmwwz2c=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUho3iLlufIKcYoHKbxScZoAWfgtVvpMQiZDLFTkJx-7H1mxA6HnVldkCugP-4mY1iyLlQn4WxWiSze5ABX9dwVnXZfShjDgsCQ=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUhN91IoaLGNJCD0i_sO-xN56idM_4-FhH1WJM6zcbXT5FdU6-gjyAgL62toTzPwp2brWxDP_9-2Dq2fVczzGZsLnJ_6ZD--0Xk=s1600-w1000"
-        ]
+        ],
+        "isReportedClosed": true
       }
     ]
   },
@@ -290,19 +292,67 @@
       },
       {
         "id": "ChIJUcKpFz1y5kcRpwik1j_t8A8",
-        "name": "Piscine Joséphine Baker"
+        "name": "Piscine Joséphine Baker",
+        "photos": [
+          "https://lh3.googleusercontent.com/places/AKR5kUidPW0kF_2iXVxx4erIUFA12tMShVyXM5X35vNjJkTfbZ6fimpT84mLpESyJ9nBbt-tV3SR-9ehSKFj1e-UBHodn6PnjMAoaRw=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiYazw7mst-TBfkAo-aR2XiiySkQR0T7ZT7OivMPhBDkXMXuKdHLMAUPYm5k98E1U4hLnVIQ4kw-Zl7OWLDAMl-mYZhwRlSIA=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUh9KSzi3sxpG2vAVI4t19qUkHAbIVZzgWGDHZxpiptB-s_zJxJSCb1EzIhF8btfMcLGchyAZ3XjXBOtRSwbeRIaa5wi8laOEAY=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUjqZd85ftQXifalAct-Qxce-kY-hMr5TtJL__GikE5IupP1XXT8tqTiSRWvTin7RdfbIzle2tpbm6XhBVIChXTGKvNf5kgh7Hk=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUi0UV6hZUKVH8Sp8e3EZ-Fk1zjcPjC0k80sXBE8ovDWhME2Gn3bQ4VUx6ONYyrbPj3O6Wms82NaTU5rLBR4qU_O19-mRz9ohvw=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUg93F_BgJQyGW5sAdvHAYiESW9MlosmPetHtnqBrZTHdImR9IyLWFFoYEDGi3VShQ_lya6Qlv8rMgJEMIBMNKDD-TV1xCGAr8g=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUjDOxS-ELJixsU0wntz8ZyIYfrqYt-H7ui-ojlTOsQgvGakLQcL7rR77U-BwEiu8FplAGCwpf-DGm_7NirJ75AKTBhbqdPxn7U=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUh70RIyAcNCxcuUItU4Rw9y3cXHjOSdkI1FvRMfnsOSatCKBvb76nwtHh9URh4bdqj1j5d7A8GSSjtGxZ1bDEHOx_DzD0Lg69g=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUi97HU45MLIefaknV8ZL2nl-FIOWO3YBN7b1EXWpihJ2IxGUGssfzFtLx0L0TWK4OYhQW3CaUIxMDIHwB4RS0vF2P1iZULIoMs=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUgBbSfboEDYkz8FLBZtSJMsqep91yT2Cyv1P767ynbDE3n7Ubw2Vtj36_nb_7mNzKgREvVB-mvW5ebUYgXOwxonmPZJ6bQ7xmw=s1600-w1000"
+        ]
       },
       {
         "id": "ChIJYyYIp8dt5kcRY2OovNCtcdU",
-        "name": "Piscine Georges Hermant"
+        "name": "Piscine Georges Hermant",
+        "photos": [
+          "https://lh3.googleusercontent.com/places/AKR5kUgCLLSk9lEm0II6-UdiPbNNn8J9QC4RIB9kPSn71cP7bSXXuSDC8sK3aXHcJB-WOtUjr14y9MrBjP1E0gPHyKjh_bnWgAsYdGk=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhrDP2O7cvhy2q0Cr6n8MKThwoY9LZJB-MSJlP7ySEhAXM-ntF0dcMZhjcrvwbBOLuS1Yoz8cQmttwGiQZVKn-TvxG34UQJMzg=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUh9NXJ2W7jRFVmK0NdHgTPfBn4Cz2Abe3kQt9lIaGAnfY_xpf6G0Be6wgDZreZY1Ll-yV3I2rXt-Jj7kARDwEmkMTgKqby1XmI=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiklkVtTgFH56DLbq7Bw2-3abZSt1mS0UHJ9gMmxszQ_2iO4EOa6uWhtpyX5zYRpZxpOGFtfgp_Jd1icT74cYcTfv0q3PXmOf4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiO8mT7w8M7rrl9iuqhv7loTO8jIpGCvfsg7O-M-9gPhLycR13T9zIkYyQ6ObJ25UD8PWKl0DqNAMNivjZzWMLfhgWn73rxzJg=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhCqvzuUp48qZ-V2iL8pDaDUsEgrpWv31dt7pK-9XHtASTkZaJM8N4AZDwz2_PyHyzClCD4b1xe4BmXcy00qZcinTQ9kULS5DU=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUg-KmuAYI1sA8yi6F6Krtvrux2DGJDOcAWeYMKuZ0oEAPtVuTrdS9osb9w1oMz7rQi-S4358ay8-rcdE14XidIjQSd162AhGPo=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUjKDhOwmh6Mhz7jD4epdJcFUUcUo-ZnQg_wyTFtVaW-SK4w6ZI0O4pF-WV3dc142C2s-1j2iXrOGzCeazd5Eg8bDBYWvvy7V_8=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUjKGvNEZIYxWpfSqkPfxoSHxM8jkn5uJ9fVcGpq_GRpV_qdOJDffmRmt3QaZiAUA3DJL8avJk8A9htlC-0RP_Xv9Bq1SKAcgCw=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUh7AjEyj4clw1rf8cJqBj_U4qkYCpHIcoVd6IarDO0SPtccvXlR930yyieBQCxu-GWOlOAMSUmZHkCBHhBiWRoqzpKFpgvn49k=s1600-w1000"
+        ]
       },
       {
         "id": "ChIJq7mrbOVt5kcRpDCvNMtx3Nk",
-        "name": "Piscine Alfred Nakache"
+        "name": "Piscine Alfred Nakache",
+        "photos": [
+          "https://lh3.googleusercontent.com/places/AKR5kUh-EA3A_r7mOpQQoFa7gsaCTbga7FIR8E51xMsuQIlAfkkkatzQcn7DkEV-3Vyqouh3NCKwZM7fvZLT7z020VoEJ5iMCkZAFCY=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhbgT220aQAzJc6jLjFAqWe2uFpMJET9t3ehHsRX2tTwU_0PWr1dKh_-6oFyu9Mp3n0TcjD8oVUPZc5EYH_KeFnnC2AtMEdLR4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUim5Td_lQzUigKguWbdD9zujZ1r_NhSyAYmg7_u54lhY2O-Xqdy6a8lNxi_Eru1S_Y_sKmmmHKXjYmnnSr6t1C3pAbBbmz75HQ=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhLTPh9EfrLh_gHWNQtk4sEJBBXyAxavQr8ldXuwBKCKHwdgUooPoPRez0oT51K9WWQT5YCguQ06l8dekfoJJTfRXleRTVGjq4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUju-BINRMvzQH0fNMYgRZ2WYbcUvntUQeKzvK8FhAgqveIkawFrZz4wTKN9j0c_Ht4rrtMSVXEBqKcVhJgYTMkHNKIIT4neJhA=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhWUm2JWDBf05R0iRB9cXWLGBNvglNQEudN_g0D9mGtIuDG4fN3xsKdIuBXww--Qb-gj0SLH2AIB6gP9El3XODylaVLhb9AZ7g=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUi8pe1u4DXAnm_FjaMIiERCySbjdNyxt4rHd_9GMkqWlnLcStBz4Lyp1oarbqh0XCzB_JFMwBxS8pQnkQV6t1W2p-wWDjPhO8M=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUjEd1nDj4Ip0d3ercRexzFXE8zf5au7trFumvAb-Frp9DQq3RfxF093EzgKcahd9y10tBPz2PMXJpMjT9k-gMbV1wDywnVBHzg=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhh_hynJ8ycirSSYj1tUZzn_k0Cpq5ZeOADOzo_D66glNBeL_qo0MJQAmqbdR-KtXD7XPTTr3ODs20lVBFyROYWpjsBrBL96bs=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUieolHNs3MQJ6E69pwuKNpTK8-0mSrr1z3AZ9hdFxx1EzhrWw4qiWXTPhfWwzMchRLMB8KvOEo2uoJoYAc7qTa5guSdOQHghPA=s1600-w1000"
+        ]
       },
       {
         "id": "ChIJf7DgWg5z5kcRy6N09IKWrm8",
-        "name": "Centre Aquatique d'Alfortville"
+        "name": "Centre Aquatique d'Alfortville",
+        "photos": [
+          "https://lh3.googleusercontent.com/places/AKR5kUj5w4t2idRdcZacV2eg4CxHclnE1xjV8Nh2q1Ri9DwnIgVhDFab2Ca7EfCuc3jTKtKfoS9koE0K8PmmWvT2sCGHLL3k44xuBjE=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiFOiJSlgf2TlgwQQV4QygQ0IJ8p6KrAEBGon8q90S3n8fPNoysDJlm4LrG1CW4haDpoFqSqchmzTjeH2Tnq1vv5-ol6MJd_G4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUgjblQ4Q9OReYY2hjMfIJMmv0iLQ-BNqEyz15rObX5yV-a4cEa_04OCi2WRwmFr8ZWU-0XENJKE7OalBjmNBytnyg_32e3Fuhk=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhjCu7reVSzo841u5pMEqckg-AojN1pO9QhJ5pLIk5KRP173m1c7nU0BwX5VxYuVwVJ4jClld30tnI-Dm4jBM0cVl__dlMDKk4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhv9ckijYOtBArePZah-4UXQoXtXH0vPdnQAwm-9h0hNSwCzk-eYwcWvWykJ9Fs-GTya8WgqJezClbOAv131d0ewsfdJxvgVBg=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUgV_ukJuQrtrxQyWpQCiAZf9zyG_EyKAFdpNdH3vAThQ54xnVHC-soSbjzbtxujYc4PB0eAoKfMR9BK38ZnpUo29BDw1UNJVbU=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUgsyh3FzqPlapodvVookSovvZf-7a5pRi3uka-cct5PMz42r8SfZQ4vOCO5Ufy0hqsiK5tYwvdTY_KzF5T83bLOt0Ky4ng5Cw=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhJ_tddBNj2DR_Ud9yu4UnFIn_ZfsiEG1sypP3KvA8yIsXmsJRJFQQeIZEaZn6VJThATmrxYMt1ej5Csx-4IdQW41Oc3LpP2fs=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUj6z8gB29u2OD1FTCxdCs8-tqhq0n52hyCxcCy_x5tTDltSMlR7OXur9P0fkKLchqx4WeezUzQ9iVTtm6vY6kGoGCg921rQ07c=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiUSVut5DBMhOTtDWS1XsupEUO5ZtwOqb-9R6gZ6D-MQlcbKH4S_apdCr_R6iJZ9CidDDuejHvZMQFH01ZIP-jP68Ry4q49Ses=s1600-w1000"
+        ]
       }
     ]
   }
