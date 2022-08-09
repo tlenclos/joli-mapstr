@@ -16,7 +16,6 @@ import thumbsSwiperCss from "node_modules/swiper/modules/thumbs/thumbs.min.css";
 import zoomSwiperCss from "node_modules/swiper/modules/zoom/zoom.min.css";
 import swiperCss from "node_modules/swiper/swiper.min.css";
 
-import { useState } from "react";
 import Places from "~/components/Places";
 import fetchPlaces, { GroupedPlaces } from "~/lib/fetchPlaces";
 
