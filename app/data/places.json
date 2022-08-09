@@ -11,6 +11,7 @@
           "Vegan",
           "Sandwich"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUg7flW-ninXaF4MjGrVGxT4nZi9xA8iVeespFmtFXmQwtfo6nHSBMHIlbySxDE0IGu_SkLSF9HQzlc5bxg1JFgSgYwKePnaqw=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUhd9qqCX9UtpXzzn8gC8pVgYb8Ve_Fg1bg16p7kv8_6Raq7A1REj053YMOuPX-cSnT7vVzKoFFUlGs0dm8W0i0PSp3eZJUMCg=s1600-w1000",
@@ -32,6 +33,7 @@
           "Bobun",
           "Sandwich"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjmIAT2Of5Xvnyv1xA6tZ2pd3BZenFfa4M8jEl1flucknUmZa3O_t0xnoIRtFcTkQg5xJ7zUMo8ZEg9G5RGxxmKANnfj_1emHw=s1600-w960",
           "https://lh3.googleusercontent.com/places/AKR5kUiQ4oECLiAzCCGkc1ERqllSnVebJ3ffXOtENfOZowdVFiaUAJvvHa3YfCEce80Zp-O0_Jxw7sFTVN6FsybrkdVeoXGRT66KpRI=s1600-w960",
@@ -52,6 +54,7 @@
           "Bubble tea",
           "Poké"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjd-6Yb2Ca0tUqZ4Dehyl4Q82bX4t8jKjBM_4tHMb-QDxHyuC98sTFz2XFE0wWzzRCeAT3HFEyuFKlI9L0Y0KxloI2DkIqDG10=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUgf1i3u-nfCpbmm0PEMk-DVbL0Fv96oOOEn7NA4N2TQOVybCyujUZj9AXkM4uL4CzE873CkMu373sIknP-5MgFhyMo-1EgB0Vk=s1600-w1000",
@@ -71,6 +74,7 @@
         "tags": [
           "Kebab"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUiqw7xniaPdwM_05mNOr5uRCpCShOMA81gs8DiTWqP2F_kDN6aeiUrebQGGscAxMTcTqm1CsL0I_qRG5Exa6ftJH9-GtJkovqs=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUiy2IYjwJiJDpO18YMTP1m-wPvZDxKWawtOpod45r1TkjsAWd97dZFSqTi2NOgGBX4A4FohAPrq5nytF5nqlNF4H5gAkRVBi14=s1600-w1000",
@@ -90,6 +94,7 @@
         "tags": [
           "Poulet"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUj-kdlkvJ1XA5FWUKBm54zBB8cEiB5PeDm23DgR7tHHSJ13Zb2HF729jm5DOxdICzn8vnr6IRNz1_aHrQlIim1VGl-yHxalzuY=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUiPMBenvfn8GQKoD0mdWMANQf5Fh9MeqHJmmAWYT4WH4JqwF3eOYZRsN7QoLDwMNDn-1H1iFvHWfkNyk8f10gaqvdbytvQoZx0=s1600-w1000",
@@ -109,6 +114,12 @@
         "tags": [
           "Chilien",
           "Tapas"
+        ],
+        "onPremise": true,
+        "photos": [
+          "https://lh3.googleusercontent.com/places/AKR5kUilpPzaEVUppU4pyTfNIwVyIq2FkBrMHnTfws6dMgU2AvZMWqJRbfzmPzbfX2NwRn7ZxjBtrbJ0wnxl0wJ388whK0gevNvZAAA=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUiLYDthoPgTglT1AsHmMPsE63Kc7gHhxdMfvToLBtd7HrOO8z8fkylyh9ipSViDW-yt_9PzduXJ3wGzBWDBzbjd0QK9Sa7FH-4=s1600-w1000",
+          "https://lh3.googleusercontent.com/places/AKR5kUhF5U3uKF5uo0xDNBIcQaFdfrDwQGeFii6m5NrvENp33ovXyMe2ezDeU5nsHCCjHiEATmp7U6WJ5LwMj7gQGOv__nhCXAaXl3w=s1600-w1000"
         ]
       },
       {
@@ -118,6 +129,7 @@
           "Française",
           "Menu du jour"
         ],
+        "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjNuawvh9TssE5gAP-s_r_9eSUHAtnLbAY0B9NBVUaebne_W_827pcLZktfU9EqGQ4BHlOG3RB2HCYD2GZW2xzJChO7MJ3DZyg=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUhz3b-sjHFT10_Ozm5pwgtWcOVebAREYh0B2B_XBMQVHnv9V4I440gqzjD381PFB6nt1Picbjk9UA64TeIaQ3g2iWPqFu2t__w=s1600-w1000",
@@ -137,6 +149,7 @@
         "tags": [
           "Burger"
         ],
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUj-Qrbv_htrTVkfEzAA4Ggrk9tZsgPu1GwRevNXK15FAHKJyIgXBCE3IH39nzeaKzA-E1Pr97vXFxU3xTgersvwu6D0r-2gOP4=s1600-w889",
           "https://lh3.googleusercontent.com/places/AKR5kUhDhjg3z8j5VbHIpxfKfwqC5n7A_noWQGEp7RDS6cOrvnwoYCdr-siXDUc30Y0vAkJvKVGQgZ2OMX-euVgHTt9c2zAOTlnnl7s=s1600-w1000",
@@ -156,6 +169,7 @@
         "tags": [
           "Kebab"
         ],
+        "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUhblaVM_d3mOXz2ZrJoFenL_A5oOSI2UPOyhCnO1xuYSe8KcneJZ-GpWoVphFdM0b54sq5-s0W2ihwPLhXb-kRJN7FfIJ5eKF4=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUjizOIJC8lqoklWFtEp_VRTU-AOIN75XBkbp52PdZdgjIg5OZT-39dovHzHU3k0_C7CG8R82eKbdzoh9KMyABMJqmdhw-1ZIg8=s1600-w1000",
@@ -176,6 +190,7 @@
           "Sandwich",
           "Poulet"
         ],
+        "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUgojKzrENNqjo4tWJLx-hSwrTlZVBHL0PSj5rhEkO91doKIymlvkLjFhKMFy0DFyILz02AmPyl6xzKCMeUgV9VEQ1X79zixoyE=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUiWLwd92fM39lsKzMl8OqJfOpTmARx2ewRWpJiUkW98iUO2Yeg8w4OqEJcozU_FiVTER_Uou6hoe9cULGpHziOhaQBbBqNcZEk=s1600-w1000",
@@ -217,6 +232,7 @@
           "Menu du jour",
           "Absinthe"
         ],
+        "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjLj_nUErQ2eK1YLl8Te0TLugr-kVDh_7TpojDT3gmagdlUCP0FBnMH23cJ4UaKDrreRlxKoitxFGOE3ycSqIWzZBK8q8KIfV8=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUjkBkLbkxbathtI-P15KYeNz0BuvJpshWQpgO-xB2egZymdMHCkwVnb2g0JKDOy1vEd5Ibimfzzx6xHYI5nokc0-uLXaq_sjQs=s1600-w1000",
@@ -236,6 +252,8 @@
         "tags": [
           "Galettes"
         ],
+        "onPremise": true,
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUhdFLhqNn4lQpQp6STgtVGayAcbo91sxFoBW0wc2zjNrCdmdfIC6Y1hMDDfjb7by-P6TDXan3w-6ZrTebVlz9Rlu7kM62ywerw=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUieS_cpMfOtWkKSpsIsbreUJQp-Mel-WI8HSeh7syf-0Vbyv7bjhtEPr3QLj5oh5E5-QYIHMk4582Q_EqvIRgN-Go829T5uJnU=s1600-w1000",
@@ -256,6 +274,8 @@
           "Kurd",
           "Sandwich"
         ],
+        "onPremise": true,
+        "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUg4atYy-xqKT9h5NKraSK6U6QcgnUS4tih6PPvLxphBAs6D5GRUQcoeX5TYmNosDrICoqtyJh3fCBJy8YffGMoQtNfeSrbi8CE=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUh0-0mDoYyIvbJruQNN9lX0PYQu-MODV2ZcQLNATkzLiOobsr5RFUmvY2VNSo1RCQlK-wqqzJz51lPGf1-3EUA6V6XqCTVgS8w=s1600-w1000",
@@ -275,6 +295,7 @@
         "tags": [
           "Française"
         ],
+        "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUh3N8Qwlizf2Fj4195AnYQA8037DIvPk_ZQJw0iIHSSCxh5NCzRStsl4xnVWSPA0DA4cf7Dhk5L-Wlvj9lQxhDHnw9gTU1iU2w=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUgn2AZVaD2MUEhj2qmU9UaO1QThjRs6dJjj087LXc2-ZGzs7YiaI1ZIQo4G4jn6XcalGisQ1OSxfq1-q61ciFIuM31WIPXdwyY=s1600-w1000",

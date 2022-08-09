@@ -33,8 +33,8 @@ interface Props {
   data: ContributedPlace;
 }
 
-export default function Place({ data }: Props) {
-  const website = data.url || data.googleData?.website;
+export default function Place({ data: place }: Props) {
+  const website = place.url || place.googleData?.website;
   const [selectedPhoto, setSelectedPhoto] = useState<number>();
 
   return (
@@ -49,23 +49,23 @@ export default function Place({ data }: Props) {
       >
         <Stack spacing={4}>
           <HStack>
-            <Image src={data.googleData?.icon} width={6} />
+            <Image src={place.googleData?.icon} width={6} />
             <Heading
               color={useColorModeValue("gray.700", "white")}
               fontSize={"xl"}
               fontFamily={"body"}
               noOfLines={1}
             >
-              <Link href={data.googleData?.url}>{data.name}</Link>
+              <Link href={place.googleData?.url}>{place.name}</Link>
             </Heading>
           </HStack>
           <HStack>
-            {data.googleData?.opening_hours?.open_now ? (
+            {place.googleData?.opening_hours?.open_now ? (
               <CheckCircleIcon color="green.500" />
             ) : (
               <CloseIcon color="red.500" />
             )}
-            {data.googleData?.opening_hours?.open_now ? (
+            {place.googleData?.opening_hours?.open_now ? (
               <Text color="green.500" fontSize="md">
                 Ouvert
               </Text>
@@ -75,7 +75,7 @@ export default function Place({ data }: Props) {
               </Text>
             )}
           </HStack>
-          {data.isReportedClosed && (
+          {place.isReportedClosed && (
             <HStack>
               <WarningIcon color="yellow.500" />
               <Text color="yellow.500" fontSize="md">
@@ -84,7 +84,7 @@ export default function Place({ data }: Props) {
             </HStack>
           )}
           <List>
-            {data.googleData?.opening_hours?.weekday_text?.map((day, i) => (
+            {place.googleData?.opening_hours?.weekday_text?.map((day, i) => (
               <ListItem
                 key={i}
                 fontWeight={today === i ? "bold" : undefined}
@@ -99,22 +99,22 @@ export default function Place({ data }: Props) {
               <LinkIcon mx="2px" /> {website}
             </Link>
           )}
-          {data.tags && (
-            <HStack spacing={4}>
-              {data.tags?.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </HStack>
-          )}
-          {data.distance && (
+          <Stack direction='row' spacing={4}>
+            {place.onPremise&&<Tag colorScheme='teal'>Sur place</Tag>}
+            {place.takeaway&&<Tag colorScheme='yellow'>A emporter</Tag>}
+            {place.tags?.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </Stack>
+          {place.distance && (
             <Text>
-              <ArrowForwardIcon mx="2px" /> {data.distance.toFixed(0)}m (🚶
-              {data.timeByFoot})
+              <ArrowForwardIcon mx="2px" /> {place.distance.toFixed(0)}m (🚶
+              {place.timeByFoot})
             </Text>
           )}
-          {data.photos && (
+          {place.photos && (
             <SimpleGrid columns={[1, 2]} spacing={2}>
-              {data.photos.slice(0, 4).map((photo, photoIndex) => (
+              {place.photos.slice(0, 4).map((photo, photoIndex) => (
                 <Image
                   src={photo}
                   key={photo}
@@ -128,7 +128,7 @@ export default function Place({ data }: Props) {
           )}
         </Stack>
       </Box>
-      {selectedPhoto !== undefined && data.photos && (
+      {selectedPhoto !== undefined && place.photos && (
         <Modal
           isOpen={true}
           onClose={() => setSelectedPhoto(undefined)}
@@ -137,7 +137,7 @@ export default function Place({ data }: Props) {
         >
           <ModalOverlay />
           <ModalContent>
-            <PhotoSlider photos={data.photos} photoIndex={selectedPhoto} />
+            <PhotoSlider photos={place.photos} photoIndex={selectedPhoto} />
           </ModalContent>
         </Modal>
       )}

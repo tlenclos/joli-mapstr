@@ -15,6 +15,8 @@ export type ContributedPlace = {
   googleData?: Place;
   photos?: string[];
   isReportedClosed?: boolean;
+  takeaway: boolean;
+  onPremise: boolean;
 };
 
 export type GroupedPlaces = Array<{
@@ -65,6 +67,8 @@ export default async function fetchPlaces(): Promise<GroupedPlaces> {
                 });
 
               return {
+                onPremise: false,
+                takeaway: false,
                 ...place,
                 distance,
                 timeByFoot: distance ? timeByFoot(distance) : undefined,
