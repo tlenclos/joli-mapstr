@@ -16,7 +16,6 @@ import thumbsSwiperCss from "node_modules/swiper/modules/thumbs/thumbs.min.css";
 import zoomSwiperCss from "node_modules/swiper/modules/zoom/zoom.min.css";
 import swiperCss from "node_modules/swiper/swiper.min.css";
 
-import { useState } from "react";
 import Places from "~/components/Places";
 import fetchPlaces, { GroupedPlaces } from "~/lib/fetchPlaces";
 
@@ -57,7 +56,7 @@ export default function Index() {
         <Heading>Joli Mapstr</Heading>
         <Button
           as="a"
-          href="https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json"
+          href="https://github.com/tlenclos/joli-mapstr/edit/master/app/data/places.json"
         >
           Éditer
         </Button>

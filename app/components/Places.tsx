@@ -6,12 +6,10 @@ interface Props {
   data: ContributedPlace[];
 }
 
-const Places = ({ data }: Props) => {
+const Places = ({ data: places }: Props) => {
   return (
     <SimpleGrid columns={[1, 1, 3]} spacing={6}>
-      {data.map((place) =>
-        place ? <Place data={place} key={place.id} /> : null
-      )}
+      {places.map((place) => <Place data={place} key={place.id} />)}
     </SimpleGrid>
   );
 };
