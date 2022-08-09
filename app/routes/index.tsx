@@ -2,11 +2,12 @@ import {
   Button,
   Container,
   Heading,
-  HStack, Tab,
+  HStack,
+  Tab,
   TabList,
   TabPanel,
   TabPanels,
-  Tabs
+  Tabs,
 } from "@chakra-ui/react";
 import { json, LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
@@ -72,7 +73,7 @@ export default function Index() {
           </TabList>
           <TabPanels>
             {data.places.map((category) => (
-              <TabPanel p={0} pt={2} key={category.name}>
+              <TabPanel p={0} pt={6} pb={8} key={category.name}>
                 <Places data={category.places} />
               </TabPanel>
             ))}

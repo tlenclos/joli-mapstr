@@ -14,6 +14,7 @@ export type ContributedPlace = {
   timeByFoot?: string;
   googleData?: Place;
   photos?: string[];
+  isReportedClosed?: boolean;
 };
 
 export type GroupedPlaces = Array<{
