@@ -15,8 +15,8 @@ export type ContributedPlace = {
   googleData?: Place;
   photos?: string[];
   isReportedClosed?: boolean;
-  takeaway: boolean;
-  onPremise: boolean;
+  takeaway?: boolean;
+  onPremise?: boolean;
 };
 
 export type GroupedPlaces = Array<{

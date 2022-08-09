@@ -100,8 +100,8 @@ export default function Place({ data: place }: Props) {
             </Link>
           )}
           <Stack direction='row' spacing={4}>
-            {place.onPremise&&<Tag colorScheme='teal'>Sur place</Tag>}
-            {place.takeaway&&<Tag colorScheme='yellow'>A emporter</Tag>}
+            {place.onPremise && <Tag colorScheme='teal'>Sur place</Tag>}
+            {place.takeaway && <Tag colorScheme='yellow'>A emporter</Tag>}
             {place.tags?.map((tag) => (
               <Tag key={tag}>{tag}</Tag>
             ))}
