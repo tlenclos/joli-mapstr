@@ -3,38 +3,10 @@
     "name": "Mnomnom 🍔",
     "places": [
       {
-        "id": "ChIJn0W4ymFt5kcRo74E4Wrk7bI",
-        "name": "Chez Funda / Les deux amis",
-        "tags": [
-          "Kurde",
-          "Végétarien",
-          "Sandwich",
-          "Plat",
-          "Traiteur"
-        ],
-        "takeaway": true,
-        "photos": [
-          "https://lh3.googleusercontent.com/places/AKR5kUi5qExcrealbE_YIAfYqJaoncwnZqo1sAUb-0ee9-Y7vn5r5Y_N7iLb-tQaNG_dhXH4FAoNqYZFZS9TzFRySOC7kbPSu1PcPQs=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUgFoVOMgERiZt94qXt893f6O-9gt51LRFB6dxReAlI0oJFPWuATmY5AjjAv6rEbWhPIDJv9ovsfHus7AR5ZnlvdK6dUBXX2FWA=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUhHaCkB5ljl_xqL_friDkGBxQInPtBieyD3xgKcsvgNly1k4HEJLkzUwlQNImjpYmYsGKAtgfV4-McmQQwS_oo09_N5XJ8iA4M=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUjNXirzlyteestQswem2gndAongQV5H0P8VFTTG5Hf_dqLBhOYcXQnFMZehkoG71BFD4ySoltySLiSUHXgfcn1GUHh19amrUU8=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUhF6MzmG_Ida5P7B3MOq2XEDSsIaIQdRx6mm1gl2UWY0eYjSMoGdkAxgKlIk5VA20bfyPbpIQoodzoWXigl79dmfrgikiErf6k=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUhXSr0qm6SBtsDCDpFx4YWB2HDPUPlC-fgp41b-cv89UGGS5xWspS6mHN46rgcEebJf-uMTMaIgaDLf7r2U-2SuybF792o7OPY=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUhAZ4so14xOsTWNHvLwVIIdak8YC0ym7Vg7_O6exQxSb0b0Pt8b6l2xRrgCv8mOD6n8TvSmZ_HD2LoL_tSYk79-mFvB8kqBvaY=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUhqB0dJGN0k4APCsvAmN_0uk1csslW2y9yM7IKM7URlA6R0199qSRjFgG6hegVBroN8ddDL8zkjxfdm9oF8jmg-P-BcuOBE100=s1600-w960",
-          "https://lh3.googleusercontent.com/places/AKR5kUjpd1eZlx3NsfTIXuEpT7Qb6-FJITwkik6jRx0urRVUaf08G-f46QWlQWSmknM_WHJjCIMfkqpb13ADYpVUqBZj9R1_0zuBsmQ=s1600-w1000",
-          "https://lh3.googleusercontent.com/places/AKR5kUjRwmY0hU2AgbuVZUzDYqZyubCR6iDiVkmEnM4gRXP_MWyb61XSSvuzaZy_UJMxzhd0NevqGspfoMwnVBMW0Owx_Gm5NC9nD00=s1600-w1000"
-        ]
-      },
-      {
         "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
         "name": "Colette",
         "url": "https://fr-fr.facebook.com/cantinechezcolette/",
-        "tags": [
-          "Français",
-          "Vegan",
-          "Sandwich"
-        ],
+        "tags": ["Français", "Vegan", "Sandwich"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUgXuITZT5bsyOzcGrZ8W7-lm-7xAGPKdn8T4bPPAgZWsIP0wBzm95YzNXJs8Pig0qiawP3fTv2A3c5spwEX7vzSO6yJ2gFbQA=s1600-w1000",
@@ -52,11 +24,7 @@
       {
         "id": "ChIJyQ_YkvZt5kcR8lpAl35QsyE",
         "name": "Bon Midi",
-        "tags": [
-          "Vietnamien",
-          "Bobun",
-          "Sandwich"
-        ],
+        "tags": ["Vietnamien", "Bobun", "Sandwich"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUiWKnMMUGf1Uv772EdhHjK5wfCCMX37dJnf5RwPYGNRxK75XMfbra3dWiLX6YsGvazdUeCcIl8ZETBES3uXbQKClmY2wSQqX7o=s1600-w960",
@@ -74,10 +42,7 @@
       {
         "id": "ChIJ70QC-VNt5kcRX_kCZrMzu50",
         "name": "Poketea",
-        "tags": [
-          "Bubble tea",
-          "Poké"
-        ],
+        "tags": ["Bubble tea", "Poké"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjnUIQd5NC7iSYH7VvPdGWcm_F67pVXJYNzZdhRNgQAc2Ush4CUCQ_OHqms861RR3vxjIP6ARf634cJHWMgDr1MOKfauaU5t0Q=s1600-w1000",
@@ -95,10 +60,7 @@
       {
         "id": "ChIJzT_1vVxt5kcRNi1iY_7UrLM",
         "name": "TOPP'IN",
-        "tags": [
-          "Bubble tea",
-          "Poke Bowl"
-        ],
+        "tags": ["Bubble tea", "Poke Bowl"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUiOsVhnBBiBE1Js7JPzwYeVo9_VSoMadfbcqNfQdu8Ytf6UJPWozrU5Pokm-kgA2x9oWLd1nAmooiEkKocnw7Lvb4trgtoCrqU=s1600-w1000",
@@ -116,9 +78,7 @@
       {
         "id": "ChIJRw4lvtdt5kcRMaNDIjxzjKE",
         "name": "Berliner Kebab",
-        "tags": [
-          "Kebab"
-        ],
+        "tags": ["Kebab"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUih8uhrGIH9Qt8kkQi79t5SBJIvRCuncLmYRfDVrG7m7HVER5Tepf8rHI336JIHPNU_Z7HqDPn3B5kSKZSP-ZLpYuj2HR_ThDo=s1600-w1000",
@@ -136,9 +96,7 @@
       {
         "id": "ChIJUamdgvVt5kcR4iAV_ZdepfM",
         "name": "Karaage-ya Charonne",
-        "tags": [
-          "Poulet"
-        ],
+        "tags": ["Poulet"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUj-QLpigWb95Qj7E54aML_TAJ4q9_Ls5hpsNbiiBqxC5UQDic1-GpYZMuG8lzoC5WPQYANSqW5LSSz7eTm1orL2rjgiEa13kaE=s1600-w1000",
@@ -156,10 +114,7 @@
       {
         "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
         "name": "La Cantina",
-        "tags": [
-          "Chilien",
-          "Tapas"
-        ],
+        "tags": ["Chilien", "Tapas"],
         "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUgdzLN8vFXzci547vNkpRrtooWDDRjI_-X6j4I2AVaPPEiXdv2SOIFhNqhkiAXDg8d0i4r04jxecf6R0LMsjhriJ9tCwmwwz2c=s1600-w1000",
@@ -170,10 +125,7 @@
       {
         "id": "ChIJFTliNe5t5kcRE5ffrqvvT4o",
         "name": "La Comète",
-        "tags": [
-          "Française",
-          "Menu du jour"
-        ],
+        "tags": ["Française", "Menu du jour"],
         "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUjUoNwic3VJbi2PWAy6XjhmeXJ_kqGn9WaiMNwM1NGdw6UhIB07-iThfKGol1KeE-gfVo4UqJok7c5tpEDdOWPkS46rJqTuxIc=s1600-w1000",
@@ -191,9 +143,7 @@
       {
         "id": "ChIJ2al2S-Vt5kcRqks8K0L5V28",
         "name": "PNY",
-        "tags": [
-          "Burger"
-        ],
+        "tags": ["Burger"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUiLJOraThXxeieY6wGwUcgL26G1o6icKG_azGbWvTxg_BlscZI7whPOgNAsK4A8A8dnQg2oJ6uHGTh05IO-znp7VFJGh1HWAIQ=s1600-w889",
@@ -211,9 +161,7 @@
       {
         "id": "ChIJYdb214lt5kcRfewr8U8Iiss",
         "name": "Impact Berliner Kebap",
-        "tags": [
-          "Kebab"
-        ],
+        "tags": ["Kebab"],
         "takeaway": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUi9nUdG-uSwSraQTRtpsl0zSBJ5HX2q7mqcrpD7RSxH_jexhCT55dAFkL99GxGvJo8OQ5ld10UXwZYreqc1Pr7vnTNBuUyoKgg=s1600-w1000",
@@ -231,10 +179,7 @@
       {
         "id": "ChIJy3B2w8Ft5kcRpW1F1uBBn5w",
         "name": "La maison du Daya",
-        "tags": [
-          "Sandwich",
-          "Poulet"
-        ],
+        "tags": ["Sandwich", "Poulet"],
         "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUj_FXvyGTNS1ZY4TZObP9smqIb1YV-Q-GfHVYDYxjezyPI90iWkxItVu20ma9l0x-j7Zbes-l-88SWg7YsIPjOdxwaP8LLq3zM=s1600-w1000",
@@ -252,10 +197,7 @@
       {
         "id": "ChIJLYQbUEZt5kcR82p5YT5bfEo",
         "name": "Bombolo",
-        "tags": [
-          "Pâtes",
-          "Pizza"
-        ],
+        "tags": ["Pâtes", "Pizza"],
         "takeaway": true,
         "onPremise": true,
         "photos": [
@@ -274,11 +216,7 @@
       {
         "id": "ChIJA4QdIvht5kcRdCNfJxHBkiM",
         "name": "La fée verte",
-        "tags": [
-          "Française",
-          "Menu du jour",
-          "Absinthe"
-        ],
+        "tags": ["Française", "Menu du jour", "Absinthe"],
         "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUi-ef8cc1OCekbWbdRG88IYjQ6MY0lL3D0sjsNVk0Vv6agAagn3YPvpzuvqr9RsgN28dlZwFd5gqNao7_4vNtZ5MTA0T8giRQc=s1600-w1000",
@@ -296,9 +234,7 @@
       {
         "id": "ChIJDTMbuK1t5kcRqhg9afxkW54",
         "name": "Krügen Général",
-        "tags": [
-          "Galettes"
-        ],
+        "tags": ["Galettes"],
         "onPremise": true,
         "takeaway": true,
         "photos": [
@@ -316,11 +252,8 @@
       },
       {
         "id": "ChIJn0W4ymFt5kcRo74E4Wrk7bI",
-        "name": "Chez Funda",
-        "tags": [
-          "Kurd",
-          "Sandwich"
-        ],
+        "name": "Chez Funda / Les deux amis",
+        "tags": ["Kurde", "Végétarien", "Sandwich", "Plat", "Traiteur"],
         "onPremise": true,
         "takeaway": true,
         "photos": [
@@ -339,9 +272,7 @@
       {
         "id": "ChIJq6p-vPdt5kcRvi3E28iRlrs",
         "name": "Aux Bons Crus",
-        "tags": [
-          "Française"
-        ],
+        "tags": ["Française"],
         "onPremise": true,
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUhk0LLz0w2AZG-HqsznVFEdkma59tUONk5N7VUcqL_Q_ctTzHKUGOkSFs8mQ0TI5iQUWnFfbSPIMQC2T__58jjRcBOVn27NqJw=s1600-w1000",
@@ -359,10 +290,7 @@
       {
         "id": "ChIJOWmKwApy5kcRxCciIPu2IyQ",
         "name": "Tambo",
-        "tags": [
-          "Péruvien",
-          "Bolivien"
-        ],
+        "tags": ["Péruvien", "Bolivien"],
         "takeaway": true,
         "onPremise": true,
         "photos": [
@@ -381,9 +309,7 @@
       {
         "id": "ChIJ0XkDE_pt5kcRnrRr23iWVzg",
         "name": "Shinjuku Sushi",
-        "tags": [
-          "Japonais"
-        ],
+        "tags": ["Japonais"],
         "takeaway": true,
         "onPremise": true,
         "photos": [
@@ -402,9 +328,7 @@
       {
         "id": "ChIJSS_avfdt5kcRLqKVY4xVVJI",
         "name": "Le Grain de Riz",
-        "tags": [
-          "Vietnamien"
-        ],
+        "tags": ["Vietnamien"],
         "takeaway": true,
         "onPremise": true,
         "photos": [
@@ -428,10 +352,7 @@
       {
         "id": "ChIJQZTrPcBt5kcR7ALuQw3bZg8",
         "name": "La fine mousse",
-        "tags": [
-          "Craft beer",
-          "Bière"
-        ],
+        "tags": ["Craft beer", "Bière"],
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUiwGgnMBEc9shBuwyjF1gh4dQgjIiQhQvWaJIvNXjlTH60HU8DcdDD4sPXLeEpGP9FR7R3Y0QpoCIv4DBSEVkpMQLwSlRmlG-c=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUiRIFLds5aVbr_l27MIw9UiFAbrIs5fqEsG6dQE0PxOxP9_Xu9iAN9O0yy_taGxgzxLzUTVUtCM2tBNKTDriuq6-Ll0feQkbLM=s1600-w1000",
@@ -448,10 +369,7 @@
       {
         "id": "ChIJQ75FIAZt5kcRs4NI_iimEdc",
         "name": "La Cantina",
-        "tags": [
-          "Bière",
-          "Tapas"
-        ],
+        "tags": ["Bière", "Tapas"],
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUgdzLN8vFXzci547vNkpRrtooWDDRjI_-X6j4I2AVaPPEiXdv2SOIFhNqhkiAXDg8d0i4r04jxecf6R0LMsjhriJ9tCwmwwz2c=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUho3iLlufIKcYoHKbxScZoAWfgtVvpMQiZDLFTkJx-7H1mxA6HnVldkCugP-4mY1iyLlQn4WxWiSze5ABX9dwVnXZfShjDgsCQ=s1600-w1000",
@@ -461,9 +379,7 @@
       {
         "id": "ChIJyzipcPBt5kcRfLsJ2clHzmw",
         "name": "La Petite Peña",
-        "tags": [
-          "Tapas"
-        ],
+        "tags": ["Tapas"],
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUi4aJeaLNFaEjVcOe8VYcwsSi458C3FkXt2i4mlnVUAv9DozLAgsPC4eydlNh-GTSMCvC4jR7mLNm4LOUqAMwZm7OdjWYB7usw=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUgJST05IS5KPN0Q83tjD3ujfa-DhPUzKNnM74xYvQSubMD86p72q8AAsGnASB7pYVZO7ACxOPdjmq2yTUZJ6TXjHsob5oNn75A=s1600-w960",
@@ -497,10 +413,7 @@
       {
         "id": "ChIJS5Irevlt5kcRh_bARgCHK7Y",
         "name": "BODOMA - Craft bar / Café",
-        "tags": [
-          "Craft beer",
-          "Bière"
-        ],
+        "tags": ["Craft beer", "Bière"],
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUhl9sQCPWcl4I7MVl78qHuJ_oqgoNBxgCy0JL0Zcvqa451x5DvrfQvOTQv7K7PYqBgbN6gn-fH83U7e_0V0kQ4weXUDNi70dcQ=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUhOWhgf4gQxqzjS8neXS9B_GfClAM-eyDPuYhYpJcf2_FL0PPb7lEv5-oXbmpqoVvD4Ji_sAetf9P4K1LkcdA79neFcFLBUvhg=s1600-w1000",
@@ -517,10 +430,7 @@
       {
         "id": "ChIJn9KGhPpt5kcRDxvRakfsMpc",
         "name": "Maison BAPBAP",
-        "tags": [
-          "Craft beer",
-          "Bière"
-        ],
+        "tags": ["Craft beer", "Bière"],
         "photos": [
           "https://lh3.googleusercontent.com/places/AKR5kUilLE5iybDZ4VD0khhUdXPpk884tQaCql10OnzSuYl3lG-bwvT7j2e1W6IbxapZZ0FpB_v8OlLmfIixFmnBb1cxT7PagE9QoOc=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUgdGVm7THvVN9TdXPOG32M_Q3K_KZPOnlmivaQrw647-16VzGhz8UaTE9i_kVtoU9iZlv3sWhpiz1CFPKckcPPYoY6QYkpcvjg=s1600-w1000",
