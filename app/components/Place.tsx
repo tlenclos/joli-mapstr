@@ -38,6 +38,7 @@ interface Props {
 export default function Place({ data: place }: Props) {
   const website = place.url || place.googleData?.website;
   const [selectedPhoto, setSelectedPhoto] = useState<number>();
+  const isOpen = place.googleData?.opening_hours?.open_now;
 
   return (
     <>
@@ -48,6 +49,7 @@ export default function Place({ data: place }: Props) {
         rounded={"md"}
         p={6}
         overflow={"hidden"}
+        opacity={isOpen ? 1 : 0.6}
       >
         <Stack spacing={4}>
           <HStack>
@@ -62,12 +64,12 @@ export default function Place({ data: place }: Props) {
             </Heading>
           </HStack>
           <HStack>
-            {place.googleData?.opening_hours?.open_now ? (
+            {isOpen ? (
               <CheckCircleIcon color="green.500" />
             ) : (
               <CloseIcon color="red.500" />
             )}
-            {place.googleData?.opening_hours?.open_now ? (
+            {isOpen ? (
               <Text color="green.500" fontSize="md">
                 Ouvert
               </Text>
