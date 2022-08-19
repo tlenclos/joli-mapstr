@@ -2,6 +2,19 @@
   {
     "name": "Mnomnom 🍔",
     "places": [
+       {
+        "id": "ChIJn0W4ymFt5kcRo74E4Wrk7bI",
+        "name": "Chez Funda / Les deux amis",
+        "tags": [
+          "Kurde",
+          "Végétarien",
+          "Sandwich", 
+          "Plat",
+          "Traiteur"
+        ],
+        "takeaway": true,
+        "photos": []
+      },
       {
         "id": "ChIJEb41Evpt5kcRG1BuHWYCwn4",
         "name": "Colette",
