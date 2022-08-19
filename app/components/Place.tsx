@@ -21,6 +21,8 @@ import {
   Tag,
   Text,
   useColorModeValue,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ContributedPlace } from "~/lib/fetchPlaces";
@@ -99,13 +101,23 @@ export default function Place({ data: place }: Props) {
               <LinkIcon mx="2px" /> {website}
             </Link>
           )}
-          <Stack direction='row' spacing={4}>
-            {place.onPremise && <Tag colorScheme='teal'>Sur place</Tag>}
-            {place.takeaway && <Tag colorScheme='yellow'>À emporter</Tag>}
+          <Wrap direction="row" spacing={4}>
+            {place.onPremise && (
+              <WrapItem>
+                <Tag colorScheme="teal">Sur place</Tag>
+              </WrapItem>
+            )}
+            {place.takeaway && (
+              <WrapItem>
+                <Tag colorScheme="yellow">À emporter</Tag>
+              </WrapItem>
+            )}
             {place.tags?.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
+              <WrapItem key={tag}>
+                <Tag>{tag}</Tag>
+              </WrapItem>
             ))}
-          </Stack>
+          </Wrap>
           {place.distance && (
             <Text>
               <ArrowForwardIcon mx="2px" /> {place.distance.toFixed(0)}m (🚶
