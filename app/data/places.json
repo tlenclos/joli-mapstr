@@ -253,7 +253,7 @@
       {
         "id": "ChIJn0W4ymFt5kcRo74E4Wrk7bI",
         "name": "Chez Funda / Les deux amis",
-        "tags": ["Kurde", "Végétarien", "Sandwich", "Plat", "Traiteur"],
+        "tags": ["Kurde", "Végétarien", "Sandwich", "Plat chaud", "Traiteur"],
         "onPremise": true,
         "takeaway": true,
         "photos": [
@@ -343,6 +343,12 @@
           "https://lh3.googleusercontent.com/places/AKR5kUhW2YRtCOJicVLv_CXGZauv3oG9aFC2nRCKYR6AV5IF5PmeoWmEc_WFFDhetpxlU1Q0UDxkd0v67P_IDL2H1bYtf8r0DLvni5Q=s1600-w1000",
           "https://lh3.googleusercontent.com/places/AKR5kUiHVKNsaqA36Lp4omHeP0wHKsSFN-iIuWke9xHU_bNQVIGvZLBGT031e9mfNmTYuT8a0jCZIYhJ2hJ7i4syT7wlDRULUwEZOyg=s1600-w1000"
         ]
+      },
+      {
+        "id": "ChIJJ04Aoflt5kcRrAB8rQ-eiaY",
+        "name": "Discovery Food",
+        "tags": ["salade", "Plat chaud"],
+        "takeaway": true
       }
     ]
   },
