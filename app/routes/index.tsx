@@ -72,7 +72,7 @@ export default function Index() {
           </TabList>
           <TabPanels>
             {data.places.map((category) => (
-              <TabPanel p={0} pt={6} pb={8} key={category.name}>
+              <TabPanel p={0} pb={8} key={category.name}>
                 <Places data={category.places} />
               </TabPanel>
             ))}

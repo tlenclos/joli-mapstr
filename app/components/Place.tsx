@@ -21,6 +21,7 @@ import {
   Tag,
   Text,
   useColorModeValue,
+  useMediaQuery,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -33,9 +34,11 @@ const today = numberdayweek[new Date().getDay()];
 
 interface Props {
   data: ContributedPlace;
+  toggleFilter: (filter: string) => void;
 }
 
-export default function Place({ data: place }: Props) {
+export default function Place({ data: place, toggleFilter }: Props) {
+  const [isDesktop] = useMediaQuery("(min-width: 800px)");
   const website = place.url || place.googleData?.website;
   const [selectedPhoto, setSelectedPhoto] = useState<number>();
   const isOpen = place.googleData?.opening_hours?.open_now;
@@ -106,17 +109,34 @@ export default function Place({ data: place }: Props) {
           <Wrap direction="row" spacing={4}>
             {place.onPremise && (
               <WrapItem>
-                <Tag colorScheme="teal">Sur place</Tag>
+                <Tag
+                  colorScheme="teal"
+                  onClick={() => toggleFilter("Sur place")}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  Sur place
+                </Tag>
               </WrapItem>
             )}
             {place.takeaway && (
               <WrapItem>
-                <Tag colorScheme="yellow">À emporter</Tag>
+                <Tag
+                  colorScheme="yellow"
+                  onClick={() => toggleFilter("À emporter")}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  À emporter
+                </Tag>
               </WrapItem>
             )}
             {place.tags?.map((tag) => (
               <WrapItem key={tag}>
-                <Tag>{tag}</Tag>
+                <Tag
+                  onClick={() => toggleFilter(tag)}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  {tag}
+                </Tag>
               </WrapItem>
             ))}
           </Wrap>
@@ -128,16 +148,18 @@ export default function Place({ data: place }: Props) {
           )}
           {place.photos && (
             <SimpleGrid columns={[1, 2]} spacing={2}>
-              {place.photos.slice(0, 4).map((photo, photoIndex) => (
-                <Image
-                  src={photo}
-                  key={photo}
-                  boxSize="200px"
-                  objectFit="cover"
-                  border="solid 2px lightgray"
-                  onClick={() => setSelectedPhoto(photoIndex)}
-                />
-              ))}
+              {place.photos
+                .slice(0, isDesktop ? 4 : 2)
+                .map((photo, photoIndex) => (
+                  <Image
+                    src={photo}
+                    key={photo}
+                    boxSize={["100%", "200px"]}
+                    objectFit="cover"
+                    border="solid 2px lightgray"
+                    onClick={() => setSelectedPhoto(photoIndex)}
+                  />
+                ))}
             </SimpleGrid>
           )}
         </Stack>
