@@ -51,7 +51,6 @@ export default function Place({ data: place, toggleFilter }: Props) {
         boxShadow={"2xl"}
         rounded={"md"}
         p={6}
-        overflow={"hidden"}
         opacity={isOpen ? 1 : 0.6}
       >
         <Stack spacing={4}>
