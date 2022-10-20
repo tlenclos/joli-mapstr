@@ -57,7 +57,8 @@ export default async function fetchPlaces(): Promise<GroupedPlaces> {
           return sortBy<ContributedPlace>(
             category.places.map((place) => {
               const googleData = googlePlaces.find(
-                (googlePlace) => googlePlace.place_id === place.id
+                (googlePlace) =>
+                  googlePlace && googlePlace.place_id === place.id
               );
               const distance =
                 googleData?.geometry?.location &&
