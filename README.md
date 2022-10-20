@@ -24,6 +24,7 @@ Open up [http://localhost:3000](http://localhost:3000) and you should be ready t
 - Add the place name and id, you can find the place ID here
   https://developers.google.com/maps/documentation/places/web-service/place-id#find-id
 - Then, run the following command to get some pictures:
+
   ```
   yarn populate-places-photos
   ```
