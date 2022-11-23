@@ -345,6 +345,20 @@
         ]
       },
       {
+        "id": "ChIJsV6fjq9z5kcRPAUi1NQc3SI",
+        "name": "Mori Café",
+        "url": "https://www.moricafeparis.com/",
+        "tags": ["Japonais", "Végétalien"],
+        "takeaway": true,
+        "photos": [
+          "https://lh3.googleusercontent.com/p/AF1QipP3NhC4QO_P2emPWpjSR7ZeoTXGTe3lsdzPPtT0=s1600-w1000",
+          "https://lh3.googleusercontent.com/p/AF1QipNcPMj-chfzOeF6VoT2y8U5ySJrBg_Wb7XUGAXZ=s1600-w1000",
+          "https://lh3.googleusercontent.com/p/AF1QipPppsIcvzpG0gWaxqNJFi1VLlGiwt4kvgFr4uo4=s1600-w1000",
+          "https://lh3.googleusercontent.com/p/AF1QipO4fJD-V9TCX-F6TwTnX2bg02Zg6k9NXR8gzL8y=s1600-w1000",
+          "https://lh3.googleusercontent.com/p/AF1QipOnCnbH4PZaEqn7zl60IkwTuMdXs2rSxYecRqrd=s1600-w1000"
+        ]
+      },
+      {
         "id": "ChIJJ04Aoflt5kcRrAB8rQ-eiaY",
         "name": "Discovery Food",
         "tags": ["salade", "Plat chaud"],
