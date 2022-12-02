@@ -17,18 +17,22 @@ async function populatePlacesPhotos() {
                 key: process.env.GOOGLE_API_KEY,
               });
 
-              const photos = googleMapData.data.result.photos
+              const photos = googleMapData.data.result?.photos
                 ? await Promise.all(
                     googleMapData.data.result.photos.map(
                       async (photo, index) => {
-                        const placePhoto =
-                          await googleMapClient.maps.placePhoto({
+                        const placePhoto = await googleMapClient.maps
+                          .placePhoto({
                             photo_reference: photo.photo_reference,
                             maxwidth: 1000,
                             // @ts-ignore
                             key: process.env.GOOGLE_API_KEY,
+                          })
+                          .catch((e) => {
+                            console.log(e.response);
+                            return null;
                           });
-                        return placePhoto.request.res.responseUrl;
+                        return placePhoto?.request.res.responseUrl;
                       }
                     )
                   )
@@ -48,7 +52,7 @@ async function populatePlacesPhotos() {
       JSON.stringify(placesData, undefined, 2)
     );
   } catch (e) {
-    console.error(e);
+    // console.error(e);
   }
 }
 
