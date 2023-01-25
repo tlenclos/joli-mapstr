@@ -1,6 +1,7 @@
 import { Dataset, createPuppeteerRouter } from "crawlee";
 import { extractOpeningHours } from "./extractors/openingHours.js";
 import { extractImages } from "./extractors/images.js";
+import { parseJsonResult } from "./extractors/details.js";
 
 export const router = createPuppeteerRouter();
 
@@ -31,21 +32,19 @@ router.addDefaultHandler(async ({ request, page, log }) => {
   });
 
   const title = await page.title();
-  
   const openingHours = await extractOpeningHours({ page, jsonData });
-  console.log(openingHours);
-
   const images = await extractImages({
     page,
     maxImages: 5,
     placeUrl: request.loadedUrl!,
   });
-  console.log(images);
+  const detail = parseJsonResult(jsonData);
 
   await Dataset.pushData({
     url: request.loadedUrl,
     title,
     openingHours,
     images,
+    ...detail,
   });
 });

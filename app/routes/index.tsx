@@ -20,10 +20,13 @@ import Places from "~/components/Places";
 import fetchPlaces, { GroupedPlaces } from "~/lib/fetchPlaces";
 
 export function headers() {
-  return {
-    "Cache-Control": "max-age=300, s-maxage=3600",
-  };
+  if (process.env.NODE_ENV !== "development") {
+    return {
+      "Cache-Control": "max-age=300, s-maxage=3600",
+    };
+  }
 }
+
 export const links = () => {
   return [
     { rel: "stylesheet", href: swiperCss },

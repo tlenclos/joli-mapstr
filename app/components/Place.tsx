@@ -26,22 +26,23 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { ContributedPlace } from "~/lib/fetchPlaces";
+import type { Place as PlaceType } from "~/lib/fetchPlaces";
 import PhotoSlider from "./PhotoSlider";
 
-const numberdayweek = [6, 0, 1, 2, 3, 4, 5];
-const today = numberdayweek[new Date().getDay()];
+const todayInFrench = new Intl.DateTimeFormat("fr-FR", {
+  weekday: "long",
+}).format(new Date());
 
 interface Props {
-  data: ContributedPlace;
+  data: PlaceType;
   toggleFilter: (filter: string) => void;
 }
 
 export default function Place({ data: place, toggleFilter }: Props) {
   const [isDesktop] = useMediaQuery("(min-width: 800px)");
-  const website = place.url || place.googleData?.website;
+  const website = place.website;
   const [selectedPhoto, setSelectedPhoto] = useState<number>();
-  const isOpen = place.googleData?.opening_hours?.open_now;
+  const isOpen = place.isOpen;
 
   return (
     <>
@@ -55,14 +56,14 @@ export default function Place({ data: place, toggleFilter }: Props) {
       >
         <Stack spacing={4}>
           <HStack>
-            <Image src={place.googleData?.icon} width={6} />
+            {/* <Image src={place.googleData?.icon} width={6} /> */}
             <Heading
               color={useColorModeValue("gray.700", "white")}
               fontSize={"xl"}
               fontFamily={"body"}
               noOfLines={1}
             >
-              <Link href={place.googleData?.url}>{place.name}</Link>
+              <Link href={place.url}>{place.title}</Link>
             </Heading>
           </HStack>
           <HStack>
@@ -81,22 +82,22 @@ export default function Place({ data: place, toggleFilter }: Props) {
               </Text>
             )}
           </HStack>
-          {place.isReportedClosed && (
+          {/* {place.isReportedClosed && (
             <HStack>
               <WarningIcon color="yellow.500" />
               <Text color="yellow.500" fontSize="md">
                 Signalé comme fermé
               </Text>
             </HStack>
-          )}
+          )} */}
           <List>
-            {place.googleData?.opening_hours?.weekday_text?.map((day, i) => (
+            {place.openingHours.map((day, i) => (
               <ListItem
                 key={i}
-                fontWeight={today === i ? "bold" : undefined}
-                color={today === i ? undefined : "gray.500"}
+                fontWeight={todayInFrench === day.day ? "bold" : undefined}
+                color={todayInFrench === day.day ? undefined : "gray.500"}
               >
-                {day}
+                {day.day} : {day.hours}
               </ListItem>
             ))}
           </List>
@@ -106,7 +107,7 @@ export default function Place({ data: place, toggleFilter }: Props) {
             </Link>
           )}
           <Wrap direction="row" spacing={4}>
-            {place.onPremise && (
+            {/* {place.onPremise && (
               <WrapItem>
                 <Tag
                   colorScheme="teal"
@@ -127,8 +128,8 @@ export default function Place({ data: place, toggleFilter }: Props) {
                   À emporter
                 </Tag>
               </WrapItem>
-            )}
-            {place.tags?.map((tag) => (
+            )} */}
+            {place.categories?.map((tag) => (
               <WrapItem key={tag}>
                 <Tag
                   onClick={() => toggleFilter(tag)}
@@ -145,10 +146,10 @@ export default function Place({ data: place, toggleFilter }: Props) {
               {place.timeByFoot})
             </Text>
           )}
-          {place.photos && (
+          {place.images && (
             <SimpleGrid columns={[1, 2]} spacing={2}>
-              {place.photos
-                .slice(0, isDesktop ? 4 : 2)
+              {place.images
+                .slice(0, isDesktop ? 2 : 2)
                 .map((photo, photoIndex) => (
                   <Image
                     src={photo}
@@ -163,7 +164,7 @@ export default function Place({ data: place, toggleFilter }: Props) {
           )}
         </Stack>
       </Box>
-      {selectedPhoto !== undefined && place.photos && (
+      {selectedPhoto !== undefined && place.images && (
         <Modal
           isOpen={true}
           onClose={() => setSelectedPhoto(undefined)}
@@ -172,7 +173,7 @@ export default function Place({ data: place, toggleFilter }: Props) {
         >
           <ModalOverlay />
           <ModalContent>
-            <PhotoSlider photos={place.photos} photoIndex={selectedPhoto} />
+            <PhotoSlider photos={place.images} photoIndex={selectedPhoto} />
           </ModalContent>
         </Modal>
       )}

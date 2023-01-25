@@ -1,89 +1,88 @@
+import placesData from "../../data/crawled.json";
+import parseDate from "date-fns/parse";
 import { sortBy } from "lodash";
 
-import client from "~/lib/googleMapClient";
-import placesData from "~/data/places.json";
-import { Place } from "./googleMapSdk";
-import { distanceFromOffice, timeByFoot } from "./distance";
+const todayInFrench = new Intl.DateTimeFormat("fr-FR", {
+  weekday: "long",
+}).format(new Date());
 
-export type ContributedPlace = {
-  id: string;
-  name: string;
-  url?: string;
-  tags?: string[];
-  distance?: number; // in meters
-  timeByFoot?: string;
-  googleData?: Place;
-  photos?: string[];
-  isReportedClosed?: boolean;
-  takeaway?: boolean;
-  onPremise?: boolean;
-};
+// Ex "11:30 to 22:00"
+function isOpenInRange(range: string): boolean {
+  const today = new Date();
+  const dateRange = range
+    .split(" to ")
+    .map((hours) => parseDate(hours, "kk:mm", today));
 
-export type GroupedPlaces = Array<{
-  name: string;
-  places: ContributedPlace[];
-}>;
+  if (dateRange.length === 2) {
+    return dateRange[0] <= today && today <= dateRange[1];
+  }
 
-async function fetchPlacesIds(ids: string[]) {
-  return (
-    await Promise.all(
-      ids.map((id) =>
-        client.maps.placeDetails({
-          place_id: id,
-          // @ts-ignore
-          key: process.env.GOOGLE_API_KEY,
-          language: "fr",
-        })
-      )
-    )
-  ).map((response) => {
-    return response.data.result;
+  return false;
+}
+
+function isOpen(openingHours: Place["openingHours"]): boolean {
+  return !!openingHours.find((day) => {
+    if (day.day === todayInFrench) {
+      if (day.hours !== "Fermé") {
+        return day.hours.split(", ").some((range) => isOpenInRange(range));
+      }
+    }
+
+    return false;
   });
 }
 
-// TODO Add cache system
-// In production https://www.npmjs.com/package/lru-cache
-// In dev filesystem
-export default async function fetchPlaces(): Promise<GroupedPlaces> {
-  let places: GroupedPlaces = [];
+export interface Place {
+  url: string;
+  title: string;
+  openingHours: OpeningHour[];
+  images: string[];
+  coords?: Coords;
+  addressParsed?: AddressParsed;
+  website?: string | null;
+  categories?: string[];
+  isOpen?: boolean;
+  distance?: number;
+  timeByFoot?: string;
+}
 
-  await Promise.all(
-    placesData.map(async (category, index) => {
-      places[index] = {
-        name: category.name,
-        places: await fetchPlacesIds(
-          category.places.map((placeData) => placeData.id)
-        ).then((googlePlaces) => {
-          return sortBy<ContributedPlace>(
-            category.places.map((place) => {
-              const googleData = googlePlaces.find(
-                (googlePlace) =>
-                  googlePlace && googlePlace.place_id === place.id
-              );
-              const distance =
-                googleData?.geometry?.location &&
-                distanceFromOffice({
-                  latitude: googleData?.geometry.location.lat,
-                  longitude: googleData?.geometry.location.lng,
-                });
+export interface OpeningHour {
+  day: string;
+  hours: string;
+}
 
-              return {
-                onPremise: false,
-                takeaway: false,
-                ...place,
-                distance,
-                timeByFoot: distance ? timeByFoot(distance) : undefined,
-                googleData,
-              };
-            }),
-            (item) => {
-              return [!item.googleData?.opening_hours?.open_now, item.distance];
-            }
-          );
-        }),
-      };
-    })
-  );
+export interface Coords {
+  lat: number;
+  lng: number;
+}
 
-  return places;
+export interface AddressParsed {
+  neighborhood: string;
+  street: string;
+  city: string;
+  postalCode: string;
+  state: any;
+  countryCode: string;
+}
+
+export type GroupedPlaces = Array<{
+  name: string;
+  places: Place[];
+}>;
+
+export default function fetchPlaces(): GroupedPlaces {
+  // TODO Find a way to display photo
+  placesData.forEach((category, index) => {
+    placesData[index].places = sortBy(
+      category.places.map((place) => ({
+        ...place,
+        isOpen: isOpen(place.openingHours),
+      })),
+      (item) => {
+        return [!item.isOpen, item.distance];
+      }
+    );
+  });
+
+  return placesData satisfies GroupedPlaces;
 }

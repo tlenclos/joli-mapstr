@@ -1,0 +1,22 @@
+name: Crawler
+on: [pull_request, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: google-maps-scrapper
+        
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run crawler
+        run: yarn start:dev
