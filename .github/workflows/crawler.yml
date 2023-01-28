@@ -6,7 +6,7 @@ jobs:
     defaults:
       run:
         working-directory: google-maps-scrapper
-        
+
     steps:
       - uses: actions/checkout@v2
 
@@ -17,6 +17,3 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
-      - name: Run crawler
-        run: yarn start:dev
