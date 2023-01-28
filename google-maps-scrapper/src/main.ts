@@ -2,6 +2,7 @@
 import { PuppeteerCrawler } from "crawlee";
 import { router } from "./router.js";
 
+// @ts-expect-error
 import places from "../../data/places.json" assert { type: "json" };
 
 let urls: string[] = [];

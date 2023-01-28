@@ -6,8 +6,10 @@ import haversine from "haversine";
 import fs from "fs/promises";
 import fsSync from "fs";
 import https from "https";
+// @ts-expect-error
 import placesData from "../../data/places.json" assert { type: "json" };
 import { createRequire } from "node:module";
+// @ts-ignore
 const require = createRequire(import.meta.url);
 
 const DATASET_DIR = "./storage/datasets/default";
