@@ -25,5 +25,4 @@ Open up [http://localhost:3000](http://localhost:3000) and you should be ready t
 
 ## TODO
 
-- Force language in french for the scrapping
-- Auto publish website every monday ?
+- Auto publish website every monday https://github.com/BetaHuhn/deploy-to-vercel-action

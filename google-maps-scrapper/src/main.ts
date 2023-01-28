@@ -5,7 +5,7 @@ import { router } from "./router.js";
 // @ts-expect-error
 import places from "../../data/places.json" assert { type: "json" };
 
-const LANGUAGE = "fr-FR";
+const LANGUAGE = "fr";
 
 let urls: string[] = [];
 places.forEach((category) => {
@@ -14,6 +14,28 @@ places.forEach((category) => {
 
 const crawler = new PuppeteerCrawler({
   requestHandler: router,
+  preNavigationHooks: [
+    async ({ request, page }) => {
+      const mapUrl = new URL(request.url);
+
+      mapUrl.searchParams.set("hl", LANGUAGE);
+
+      await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(navigator, "language", {
+          get() {
+            return LANGUAGE;
+          },
+        });
+        Object.defineProperty(navigator, "languages", {
+          get() {
+            return [LANGUAGE];
+          },
+        });
+      });
+
+      request.url = mapUrl.toString();
+    },
+  ],
   launchContext: {
     launchOptions: {
       args: [

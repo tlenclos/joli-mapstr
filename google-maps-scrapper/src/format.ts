@@ -91,7 +91,7 @@ await Promise.all(
         longitude: place.coords.lng,
       });
     const timeByFootValue = distance ? timeByFoot(distance) : undefined;
-    indexedPlaces[place.url] = {
+    indexedPlaces[place.url.replace("?hl=fr", "")] = {
       ...place,
       distance,
       timeByFoot: timeByFootValue,

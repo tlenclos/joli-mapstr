@@ -17,7 +17,6 @@ export const parseJsonResult = (placeData: any) => {
   };
 
   const coordsArr = placeData[9];
-  // TODO: Very rarely place[9] is empty, figure out why
   const coords = coordsArr
     ? { lat: coordsArr[2], lng: coordsArr[3] }
     : { lat: null, lng: null };

@@ -71,7 +71,6 @@ export type GroupedPlaces = Array<{
 }>;
 
 export default function fetchPlaces(): GroupedPlaces {
-  // TODO Find a way to display photo
   placesData.forEach((category, index) => {
     placesData[index].places = sortBy(
       category.places.map((place) => ({
