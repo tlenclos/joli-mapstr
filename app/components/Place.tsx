@@ -152,7 +152,7 @@ export default function Place({ data: place, toggleFilter }: Props) {
                 .slice(0, isDesktop ? 2 : 2)
                 .map((photo, photoIndex) => (
                   <Image
-                    src={photo}
+                    src={`images/${photo}`}
                     key={photo}
                     boxSize={["100%", "200px"]}
                     objectFit="cover"

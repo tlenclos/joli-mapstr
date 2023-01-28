@@ -1,6 +1,11 @@
-// This script is just to format dataset better for the remix app and add metadata if needed
+// This script is used for
+// - Downloading images that can't be served directly from google
+// - Format dataset
+// - Add more information like distance from workplace
 import haversine from "haversine";
 import fs from "fs/promises";
+import fsSync from "fs";
+import https from "https";
 import placesData from "../../data/places.json" assert { type: "json" };
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
@@ -41,6 +46,36 @@ function timeByFoot(distanceInMeters: number): string {
   return secondsToMinutes(Number(((distanceInMeters / 80) * 60).toFixed(0)));
 }
 
+async function downloadFile(url: string, targetFile: string) {
+  return await new Promise((resolve, reject) => {
+    https
+      .get(url, (response) => {
+        const code = response.statusCode ?? 0;
+
+        if (code >= 400) {
+          return reject(new Error(response.statusMessage));
+        }
+
+        // handle redirects
+        if (code > 300 && code < 400 && !!response.headers.location) {
+          return resolve(downloadFile(response.headers.location, targetFile));
+        }
+
+        // save the file to disk
+        const fileWriter = fsSync
+          .createWriteStream(targetFile)
+          .on("finish", () => {
+            resolve({});
+          });
+
+        response.pipe(fileWriter);
+      })
+      .on("error", (error) => {
+        reject(error);
+      });
+  });
+}
+
 // Format and move files
 let indexedPlaces: Record<string, any> = {};
 const files = await fs.readdir(DATASET_DIR);
@@ -58,6 +93,13 @@ await Promise.all(
       ...place,
       distance,
       timeByFoot: timeByFootValue,
+      images: await Promise.all(
+        place.images.map(async (image: string, index: number) => {
+          const imageName = `${index}-${place.placeId}.jpg`;
+          await downloadFile(image, `../public/images/${imageName}`);
+          return imageName;
+        })
+      ),
     };
   })
 );
