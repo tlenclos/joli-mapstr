@@ -5,7 +5,7 @@ import { router } from "./router.js";
 // @ts-expect-error
 import places from "../../data/places.json" assert { type: "json" };
 
-const LANGUAGE = "fr";
+const LANGUAGE = "fr-FR";
 
 let urls: string[] = [];
 places.forEach((category) => {

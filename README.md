@@ -21,10 +21,9 @@ Open up [http://localhost:3000](http://localhost:3000) and you should be ready t
 
 - Open the file with places data
   https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json
-- Add the place name and id, you can find the place ID here
-  https://developers.google.com/maps/documentation/places/web-service/place-id#find-id
-- Then, run the following command to get some pictures:
+- Add the place url from google maps
 
-  ```
-  yarn populate-places-photos
-  ```
+## TODO
+
+- Force language in french for the scrapping
+- Auto publish website every monday ?

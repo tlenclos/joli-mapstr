@@ -9,6 +9,18 @@ declare const APP_INITIALIZATION_STATE: any;
 
 router.addDefaultHandler(async ({ request, page, log }) => {
   log.info(request.loadedUrl!);
+  await page.evaluateOnNewDocument(() => {
+    Object.defineProperty(navigator, "language", {
+      get: function () {
+        return "fr-FR";
+      },
+    });
+    Object.defineProperty(navigator, "languages", {
+      get: function () {
+        return ["fr-FR", "fr"];
+      },
+    });
+  });
 
   const consentButton = await page.$(
     '[action^="https://consent.google"] button'
