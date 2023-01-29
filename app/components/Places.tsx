@@ -1,23 +1,23 @@
 import { SimpleGrid, VStack } from "@chakra-ui/react";
 import { intersection } from "lodash";
 import Place from "~/components/Place";
-import { ContributedPlace } from "~/lib/fetchPlaces";
+import type { Place as PlaceType } from "~/lib/fetchPlaces";
 import Filters from "./Filters";
 import { useSearchParams } from "@remix-run/react";
 
 interface Props {
-  data: ContributedPlace[];
+  data: PlaceType[];
 }
 
-const getPlaceTag = (place: ContributedPlace) => {
-  const tags = place.tags || [];
+const getPlaceTag = (place: PlaceType) => {
+  const tags = place.categories || [];
 
-  if (place.onPremise) {
-    tags.push("Sur place");
-  }
-  if (place.takeaway) {
-    tags.push("À emporter");
-  }
+  // if (place.onPremise) {
+  //   tags.push("Sur place");
+  // }
+  // if (place.takeaway) {
+  //   tags.push("À emporter");
+  // }
 
   return tags;
 };
@@ -43,7 +43,7 @@ const Places = ({ data: places }: Props) => {
       <Filters filters={filters} toggleFilter={toggleFilter} />
       <SimpleGrid columns={[1, 1, 3]} spacing={6}>
         {filteredPlaces.map((place) => (
-          <Place data={place} key={place.id} toggleFilter={toggleFilter} />
+          <Place data={place} key={place.url} toggleFilter={toggleFilter} />
         ))}
       </SimpleGrid>
     </VStack>

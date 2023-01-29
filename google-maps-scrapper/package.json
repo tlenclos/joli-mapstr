@@ -1,0 +1,26 @@
+{
+  "name": "google-maps",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "This is an example of a Crawlee project.",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.16",
+    "crawlee": "^3.1.4",
+    "puppeteer": "*",
+    "haversine": "^1.1.1",
+    "@types/haversine": "^1.1.5",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.9.4",
+    "@apify/tsconfig": "^0.1.0"
+  },
+  "scripts": {
+    "start": "npm run start:dev && npm run format-results",
+    "start:dev": "ts-node-esm -T src/main.ts",
+    "format-results": "ts-node-esm -T src/format.ts"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

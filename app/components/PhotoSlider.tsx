@@ -26,7 +26,7 @@ export default function PhotoSlider({ photos, photoIndex = 1 }: Props) {
       >
         {photos.map((image, i) => (
           <SwiperSlide zoom key={image}>
-            <Image src={image} height="60vh" />
+            <Image src={`images/${image}`} height="60vh" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -42,7 +42,7 @@ export default function PhotoSlider({ photos, photoIndex = 1 }: Props) {
         {photos.map((image, i) => (
           <SwiperSlide zoom key={image}>
             <Image
-              src={image}
+              src={`images/${image}`}
               opacity={selectedSlide === i ? 0.5 : 1}
               boxSize="200px"
               objectFit="cover"

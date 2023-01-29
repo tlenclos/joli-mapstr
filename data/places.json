@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Mnomnom 🍔",
+    "places": [
+      "https://www.google.fr/maps/place/Ch%E1%BB%8B+B%E1%BA%A3o/@48.8594635,2.3748207,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66da8812e62a9:0xaafc77b01b0b10d4!8m2!3d48.85946!4d2.3770094",
+      "https://www.google.fr/maps/place/Chez+Colette/@48.8615363,2.373238,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dfa1235be11:0x7ec202661d6e501b!8m2!3d48.8615351!4d2.3777255",
+      "https://www.google.fr/maps/place/BON+MIDI/@48.8588136,2.3803776,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df692d80fc9:0x21b3507e97405af2!8m2!3d48.8588081!4d2.3825735",
+      "https://www.google.fr/maps/place/Poketea/@48.8570793,2.3711937,15z/data=!4m6!3m5!1s0x47e66d53f90244ef:0x9dbb33b36602f95f!8m2!3d48.8571129!4d2.3775101!15sCgdQb2tldGVhWgkiB3Bva2V0ZWGSARNoYXdhaWlhbl9yZXN0YXVyYW504AEA?coh=164777&entry=tt&shorturl=1",
+      "https://www.google.fr/maps/place/TOPP'IN+Poke+Bowl+%26+Bubble+Tea/@48.8573462,2.3791992,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d5cbdf53fcd:0xb3acd4fe63622d36!8m2!3d48.8573427!4d2.3813879",
+      "https://www.google.fr/maps/place/Impact+Berliner+Kebap/@48.8583485,2.3782443,17z/data=!4m6!3m5!1s0x47e66d89d7f6d661:0xcb8a084ff12bec7d!8m2!3d48.8618159!4d2.3830094!15sCg5iZXJsaW5lciBrZWJhYloQIg5iZXJsaW5lciBrZWJhYpIBFGZhc3RfZm9vZF9yZXN0YXVyYW504AEA?coh=164777&entry=tt&shorturl=1",
+      "https://www.google.fr/maps/place/Karaage-ya+Charonne/@48.8558928,2.384409,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df5829da951:0xf3a55e97fd1520e2!8m2!3d48.8558893!4d2.3865977",
+      "https://www.google.fr/maps/place/La+Com%C3%A8te/@48.8587038,2.3594215,14z/data=!4m7!3m6!1s0x47e66dee35623915:0x8a4fefabaedf9713!8m2!3d48.8578773!4d2.3815361!15sCgpsYSBjb23DqHRlWgwiCmxhIGNvbcOodGWSAQZiaXN0cm_gAQA!16s%2Fg%2F1vd70mp6?coh=164777&entry=tt&shorturl=1",
+      "https://www.google.fr/maps/place/PNY+OBERKAMPF/@48.8656434,2.3755803,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66de54b76a9d9:0x6f57f9422b3c4baa!8m2!3d48.8656399!4d2.377769",
+      "https://www.google.fr/maps/place/La+Maison+du+Daya/@48.8616855,2.3802493,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dc1c37670cb:0x9c9f41e0d6456da5!8m2!3d48.861682!4d2.382438",
+      "https://www.google.fr/maps/place/Bombol%C3%B2+Epicerie-Pizzeria-Oenoth%C3%A8que-Traiteur+Italien/@48.8602228,2.3735287,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d46501b842d:0x4a7c5b3e61796af3!8m2!3d48.8602193!4d2.3757174",
+      "https://www.google.fr/maps/place/Kr%C3%BCgen+G%C3%A9n%C3%A9ral/@48.8611635,2.376071,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dadb81b330d:0x9e5b64fc693d18aa!8m2!3d48.86116!4d2.3782597",
+      "https://www.google.fr/maps/place/Chez+Funda/@48.8569909,2.3774666,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66d61cab8459f:0xb2ede46ae104bea3!8m2!3d48.8569874!4d2.3796553",
+      "https://www.google.fr/maps/place/AUX+BONS+CRUS/@48.8572137,2.377822,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df7bc7eaaab:0xbb9691c8dbc42dbe!8m2!3d48.8572154!4d2.3800287",
+      "https://www.google.fr/maps/place/Tambo/@48.8551345,2.3789277,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720ac08a6939:0x2423b6fb202227c4!8m2!3d48.855131!4d2.3811164",
+      "https://www.google.fr/maps/place/Shinjuku+Sushi/@48.8551518,2.3723617,15z/data=!4m5!3m4!1s0x47e66dfa130379d1:0x38579678db6bb49e!8m2!3d48.8617186!4d2.3777568",
+      "https://www.google.fr/maps/place/Le+Grain+de+Riz/@48.8570537,2.3776714,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df7bdda2f49:0x9254558c6395a22e!8m2!3d48.8570989!4d2.3796791",
+      "https://www.google.fr/maps/place/Mori+caf%C3%A9/@48.8534565,2.3735623,17z/data=!3m1!4b1!4m5!3m4!1s0x47e673af8e9f5eb1:0x22dd1cd4d422053c!8m2!3d48.8534522!4d2.3757778"
+    ]
+  },
+  {
+    "name": "Bars 🍻",
+    "places": [
+      "https://www.google.fr/maps/place/La+Fine+Mousse+Bar/@48.8648674,2.379608,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dc03deb9441:0xf66db0d43ee02ec!8m2!3d48.8648729!4d2.3818231",
+      "https://www.google.fr/maps/place/La+Petite+Pe%C3%B1a/@48.8608854,2.3793596,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df070a938cb:0x6cce47c9d909bb7c!8m2!3d48.8608819!4d2.3815483",
+      "https://www.google.fr/maps/place/Le+Consulat+Voltaire/@48.8595372,2.3772556,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66deef65328ff:0xf9e1633c8f72eb1e!8m2!3d48.8595396!4d2.3794631",
+      "https://www.google.fr/maps/place/BODOMA+-+Craft+bar+%2F+Caf%C3%A9/@48.8604875,2.3739286,17z/data=!3m2!4b1!5s0x47e66df9812f045b:0xa2069713ddce0334!4m5!3m4!1s0x47e66df97a2b924b:0xb62b870046c0f687!8m2!3d48.860484!4d2.3761173",
+      "https://www.google.fr/maps/place/Maison+BAPBAP/@48.8604875,2.3739286,17z/data=!4m5!3m4!1s0x47e66dfa8486d29f:0x9732ec476ad11b0f!8m2!3d48.8636437!4d2.3786312"
+    ]
+  },
+  {
+    "name": "Piscines 🏊",
+    "places": [
+      "https://www.google.fr/maps/place/Piscine+Yvonne+Godard/@48.8613697,2.4081697,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66db95905d86b:0x9121da759939b4a3!8m2!3d48.8613662!4d2.4103584",
+      "https://www.google.fr/maps/place/ESPACE+AQUATIQUE+Pailleron+-+Horaires+patinoire+et+fitness+:+voir+site+internet/@48.8809048,2.3758197,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66ddb80046117:0x349fa4f54ab4eeda!8m2!3d48.8808951!4d2.378014",
+      "https://www.google.fr/maps/place/Piscine+Jos%C3%A9phine+Baker/@48.8360863,2.3715743,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6723d17a9c251:0xff0ed3fd6a408a7!8m2!3d48.8360829!4d2.376059",
+      "https://www.google.fr/maps/place/Piscine+Georges+Hermant/@48.8824427,2.3873053,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dc7a7082663:0xd571add0bca86363!8m2!3d48.8824392!4d2.389494",
+      "https://www.google.fr/maps/place/Piscine+Alfred+Nakache/@48.8714724,2.3768841,17z/data=!3m2!4b1!5s0x47e66de61af80821:0x4cd198a9b030a1b4!4m5!3m4!1s0x47e66de56cabb9ab:0xd9dc71cb34af30a4!8m2!3d48.8714689!4d2.3790728",
+      "https://www.google.fr/maps/place/Centre+Aquatique+d'Alfortville/@48.8011955,2.4142216,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6730e5ae0b07f:0x6fae9682f474a3cb!8m2!3d48.801192!4d2.4164103"
+    ]
+  }
+]

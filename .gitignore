@@ -10,3 +10,7 @@ node_modules
 /api/index.js
 /api/index.js.map
 /api/_assets
+
+# Crawled data
+/public/images/*
+/data/crawled.json
