@@ -2,11 +2,8 @@
 
 ## Installation
 
-Create an [API token](https://developers.google.com/maps/documentation/javascript)
-and put it in the `GOOGLE_API_KEY` environment variable (`.env` file).
-
 ```sh
-yarn
+make
 ```
 
 ## Development
