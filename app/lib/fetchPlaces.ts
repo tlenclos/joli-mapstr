@@ -2,14 +2,16 @@ import placesData from "../../data/crawled.json";
 import parseDate from "date-fns/parse";
 import { sortBy } from "lodash";
 
-function dateInFrench(date: Date = new Date()) {
+const defaultDateWithTimezone = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' }))
+
+function dateInFrench(date: Date = defaultDateWithTimezone) {
   return new Intl.DateTimeFormat("fr-FR", {
     weekday: "long",
   }).format(date);
 }
 
 // Ex "11:30 to 22:00"
-function isOpenInRange(range: string, date: Date = new Date()): boolean {
+function isOpenInRange(range: string, date: Date = defaultDateWithTimezone): boolean {
   const dateRange = range
     .split(" to ")
     .map((hours) => parseDate(hours, "kk:mm", date));
