@@ -20,9 +20,5 @@ Open up [http://localhost:3000](http://localhost:3000) and you should be ready t
 ## How to add a place
 
 - Open the file with places data
-  https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json
+  [https://github.com/tlenclos/joli-mapstr/blob/master/app/data/places.json](https://github.com/tlenclos/joli-mapstr/blob/master/data/places.json)
 - Add the place url from google maps
-
-## TODO
-
-- Auto publish website every monday https://github.com/BetaHuhn/deploy-to-vercel-action
