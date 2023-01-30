@@ -36,12 +36,17 @@ export const links = () => {
   ];
 };
 
-export async function loader(args: LoaderArgs) {
+export async function loader({ request }: LoaderArgs) {
   let places: GroupedPlaces = [];
   let error = false;
+  const url = new URL(request.url);
+  const date = url.searchParams.has("date")
+    ? new Date(url.searchParams.get("date")!)
+    : undefined;
 
   try {
-    places = await fetchPlaces();
+    console.log(date);
+    places = await fetchPlaces(date);
   } catch (e) {
     console.error(e);
     error = true;

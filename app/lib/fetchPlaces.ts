@@ -2,29 +2,30 @@ import placesData from "../../data/crawled.json";
 import parseDate from "date-fns/parse";
 import { sortBy } from "lodash";
 
-const todayInFrench = new Intl.DateTimeFormat("fr-FR", {
-  weekday: "long",
-}).format(new Date());
+function dateInFrench(date: Date = new Date()) {
+  return new Intl.DateTimeFormat("fr-FR", {
+    weekday: "long",
+  }).format(date);
+}
 
 // Ex "11:30 to 22:00"
-function isOpenInRange(range: string): boolean {
-  const today = new Date();
+function isOpenInRange(range: string, date: Date = new Date()): boolean {
   const dateRange = range
     .split(" to ")
-    .map((hours) => parseDate(hours, "kk:mm", today));
+    .map((hours) => parseDate(hours, "kk:mm", date));
 
   if (dateRange.length === 2) {
-    return dateRange[0] <= today && today <= dateRange[1];
+    return dateRange[0] <= date && date <= dateRange[1];
   }
 
   return false;
 }
 
-function isOpen(openingHours: Place["openingHours"]): boolean {
+function isOpen(openingHours: Place["openingHours"], date?: Date): boolean {
   return !!openingHours.find((day) => {
-    if (day.day === todayInFrench) {
+    if (day.day === dateInFrench(date)) {
       if (day.hours !== "Fermé") {
-        return day.hours.split(", ").some((range) => isOpenInRange(range));
+        return day.hours.split(", ").some((range) => isOpenInRange(range, date));
       }
     }
 
@@ -70,13 +71,15 @@ export type GroupedPlaces = Array<{
   places: Place[];
 }>;
 
-export default function fetchPlaces(): GroupedPlaces {
+export default function fetchPlaces(date?: Date): GroupedPlaces {
   placesData.forEach((category, index) => {
     placesData[index].places = sortBy(
-      category.places.map((place) => ({
-        ...place,
-        isOpen: isOpen(place.openingHours),
-      })),
+      category.places.map((place) => {
+        return {
+          ...place,
+          isOpen: place.openingHours ? isOpen(place.openingHours, date) : false,
+        }
+      }),
       (item) => {
         return [!item.isOpen, item.distance];
       }
