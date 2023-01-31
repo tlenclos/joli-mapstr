@@ -15,7 +15,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { json, LoaderArgs } from "@remix-run/node";
-import { useLoaderData, useSearchParams } from "@remix-run/react";
+import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
 import navigationSwiperCss from "node_modules/swiper/modules/navigation/navigation.min.css";
 import thumbsSwiperCss from "node_modules/swiper/modules/thumbs/thumbs.min.css";
 import zoomSwiperCss from "node_modules/swiper/modules/zoom/zoom.min.css";
@@ -111,11 +111,14 @@ export default function Index() {
     setSearchParams(searchParams);
   };
   const selectedPlace = searchParams.get("place");
+  const showResetButton = searchParams.get("place") || searchParams.get("date");
 
   return (
     <Container maxW={"7xl"} pt={6}>
       <HStack justifyContent="space-between">
-        <Heading>Joli Mapstr</Heading>
+        <Link to="/">
+          <Heading>Joli Mapstr</Heading>
+        </Link>
         <HStack>
           <IconButton
             aria-label="Trouver un lieu aléatoirement"
@@ -145,11 +148,13 @@ export default function Index() {
             onChange={onChangeDate}
             maxW={64}
           />
-          <IconButton
-            aria-label="Réinitialiser les filtres"
-            icon={<CloseIcon />}
-            onClick={reset}
-          />
+          {showResetButton && (
+            <IconButton
+              aria-label="Réinitialiser les filtres"
+              icon={<CloseIcon />}
+              onClick={reset}
+            />
+          )}
         </HStack>
       </HStack>
       {data.error ? (
