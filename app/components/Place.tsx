@@ -3,13 +3,11 @@ import {
   CheckCircleIcon,
   CloseIcon,
   LinkIcon,
-  WarningIcon,
 } from "@chakra-ui/icons";
 import {
   Box,
   Heading,
   HStack,
-  Image,
   Link,
   List,
   ListItem,
@@ -26,6 +24,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import Image, { MimeType } from "remix-image";
 import type { Place as PlaceType } from "~/lib/fetchPlaces";
 import PhotoSlider from "./PhotoSlider";
 
@@ -152,11 +151,26 @@ export default function Place({ data: place, toggleFilter }: Props) {
                 .slice(0, isDesktop ? 2 : 2)
                 .map((photo, photoIndex) => (
                   <Image
-                    src={`images/${photo}`}
                     key={photo}
-                    boxSize={["100%", "200px"]}
-                    objectFit="cover"
-                    border="solid 2px lightgray"
+                    src={`images/${photo}`}
+                    responsive={[
+                      {
+                        size: {
+                          width: 170,
+                          height: 170,
+                        },
+                        maxWidth: 170,
+                      },
+                    ]}
+                    options={{
+                      fit: "cover",
+                      contentType: MimeType.WEBP,
+                      quality: 80,
+                    }}
+                    style={{
+                      objectFit: "cover",
+                      border: "solid 2px lightgray",
+                    }}
                     onClick={() => setSelectedPhoto(photoIndex)}
                   />
                 ))}
