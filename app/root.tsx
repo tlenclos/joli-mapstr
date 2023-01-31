@@ -10,6 +10,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { MetaFunction, LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import remixImageStyles from "remix-image/remix-image.css";
 
 import { ServerStyleContext, ClientStyleContext } from "./context";
 
@@ -21,6 +22,7 @@ export const meta: MetaFunction = () => ({
 
 export let links: LinksFunction = () => {
   return [
+    { rel: "stylesheet", href: remixImageStyles },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com" },
     {
