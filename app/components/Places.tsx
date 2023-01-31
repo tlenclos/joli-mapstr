@@ -25,7 +25,11 @@ const getPlaceTag = (place: PlaceType) => {
 const Places = ({ data: places }: Props) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = searchParams.getAll("filters") || [];
-  const setFilters = (filters: string[]) => setSearchParams({ filters });
+  const setFilters = (filters: string[]) =>
+    setSearchParams({
+      ...Object.fromEntries(searchParams.entries()),
+      filters,
+    });
   const toggleFilter = (filter: string) =>
     setFilters(
       filters.includes(filter)

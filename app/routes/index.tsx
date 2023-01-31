@@ -3,6 +3,7 @@ import {
   Container,
   Heading,
   HStack,
+  Input,
   Tab,
   TabList,
   TabPanel,
@@ -10,7 +11,7 @@ import {
   Tabs,
 } from "@chakra-ui/react";
 import { json, LoaderArgs } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useSearchParams } from "@remix-run/react";
 import navigationSwiperCss from "node_modules/swiper/modules/navigation/navigation.min.css";
 import thumbsSwiperCss from "node_modules/swiper/modules/thumbs/thumbs.min.css";
 import zoomSwiperCss from "node_modules/swiper/modules/zoom/zoom.min.css";
@@ -45,8 +46,7 @@ export async function loader({ request }: LoaderArgs) {
     : undefined;
 
   try {
-    console.log(date);
-    places = await fetchPlaces(date);
+    places = fetchPlaces(date);
   } catch (e) {
     console.error(e);
     error = true;
@@ -57,22 +57,49 @@ export async function loader({ request }: LoaderArgs) {
 
 export default function Index() {
   const data = useLoaderData<typeof loader>();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categories = data.places.map((category) => category.name);
+  const tab = searchParams.has("tab")
+    ? searchParams.get("tab")!
+    : categories[0];
 
   return (
     <Container maxW={"7xl"} pt={6}>
       <HStack justifyContent="space-between">
         <Heading>Joli Mapstr</Heading>
-        <Button
-          as="a"
-          href="https://github.com/tlenclos/joli-mapstr/edit/master/data/places.json"
-        >
-          Éditer
-        </Button>
+        <HStack>
+          <Button
+            as="a"
+            href="https://github.com/tlenclos/joli-mapstr/edit/master/data/places.json"
+          >
+            Ajouter un lieu
+          </Button>
+          <Input
+            type="datetime-local"
+            value={searchParams.get("date") || ""}
+            onChange={(e) =>
+              setSearchParams({
+                ...Object.fromEntries(searchParams.entries()),
+                date: e.target.value,
+              })
+            }
+            maxW={64}
+          />
+        </HStack>
       </HStack>
       {data.error ? (
         <p>Erreur 💥</p>
       ) : (
-        <Tabs pt={6}>
+        <Tabs
+          pt={6}
+          index={categories.indexOf(tab)}
+          onChange={(index) =>
+            setSearchParams({
+              ...Object.fromEntries(searchParams.entries()),
+              tab: categories[index],
+            })
+          }
+        >
           <TabList>
             {data.places.map((category) => (
               <Tab key={category.name}>{category.name}</Tab>

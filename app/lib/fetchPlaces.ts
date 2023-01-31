@@ -64,7 +64,7 @@ export interface AddressParsed {
   street: string;
   city: string;
   postalCode: string;
-  state: any;
+  state?: any;
   countryCode: string;
 }
 
