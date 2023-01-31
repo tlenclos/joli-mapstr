@@ -37,6 +37,7 @@ function isOpen(openingHours: Place["openingHours"], date?: Date): boolean {
 
 export interface Place {
   url: string;
+  placeId: string;
   title: string;
   openingHours: OpeningHour[];
   images: string[];

@@ -7,6 +7,7 @@ import { useSearchParams } from "@remix-run/react";
 
 interface Props {
   data: PlaceType[];
+  selectedPlace?: PlaceType["placeId"];
 }
 
 const getPlaceTag = (place: PlaceType) => {
@@ -22,7 +23,7 @@ const getPlaceTag = (place: PlaceType) => {
   return tags;
 };
 
-const Places = ({ data: places }: Props) => {
+const Places = ({ data: places, selectedPlace }: Props) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = searchParams.getAll("filters") || [];
   const setFilters = (filters: string[]) =>
@@ -36,11 +37,13 @@ const Places = ({ data: places }: Props) => {
         ? filters.filter((currentFilter) => filter !== currentFilter)
         : [...filters, filter]
     );
-  const filteredPlaces = places.filter((place) =>
-    filters.length > 0
+  const filteredPlaces = places.filter((place) => {
+    if (selectedPlace && place.placeId !== selectedPlace) return false;
+
+    return filters.length > 0
       ? intersection(getPlaceTag(place), filters).length > 0
-      : true
-  );
+      : true;
+  });
 
   return (
     <VStack>
