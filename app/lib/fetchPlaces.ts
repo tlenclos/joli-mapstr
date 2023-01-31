@@ -10,7 +10,7 @@ function dateInFrench(date: Date = defaultDateWithTimezone) {
   }).format(date);
 }
 
-// Ex "11:30 to 22:00"
+// FIXME if the second is past midnight it won't work properly since the second date is the same day (ie 19:00 to 02:00)
 function isOpenInRange(range: string, date: Date = defaultDateWithTimezone): boolean {
   const dateRange = range
     .split(" to ")
