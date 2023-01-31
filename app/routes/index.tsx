@@ -134,7 +134,7 @@ export default function Index() {
               </chakra.div>
             }
             onClick={findRandomPlace}
-            disabled={isRollingDice}
+            isDisabled={isRollingDice}
           />
           <Button
             as="a"
