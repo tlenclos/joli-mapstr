@@ -146,9 +146,9 @@ export default function Place({ data: place, toggleFilter }: Props) {
             </Text>
           )}
           {place.images && (
-            <SimpleGrid columns={[1, 2]} spacing={2}>
+            <SimpleGrid columns={2} spacing={2}>
               {place.images
-                .slice(0, isDesktop ? 2 : 2)
+                .slice(0, 2)
                 .map((photo, photoIndex) => (
                   <Image
                     key={photo}

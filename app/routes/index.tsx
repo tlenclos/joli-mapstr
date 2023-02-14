@@ -13,6 +13,7 @@ import {
   TabPanels,
   Tabs,
   chakra,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { json, LoaderArgs } from "@remix-run/node";
 import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
@@ -78,6 +79,7 @@ export default function Index() {
     ? searchParams.get("tab")!
     : categories[0];
   const [isRollingDice, setIsRollingDice] = useState(false);
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   const onChangeTab = (index: number) =>
     setSearchParams({
@@ -116,9 +118,11 @@ export default function Index() {
   return (
     <Container maxW={"7xl"} pt={6}>
       <HStack justifyContent="space-between">
-        <Link to="/">
-          <Heading>Joli Mapstr</Heading>
-        </Link>
+        {isLargerThan800 && (
+          <Link to="/">
+            <Heading>Joli Mapstr</Heading>
+          </Link>
+        )}
         <HStack>
           <IconButton
             aria-label="Trouver un lieu aléatoirement"
@@ -140,13 +144,13 @@ export default function Index() {
             as="a"
             href="https://github.com/tlenclos/joli-mapstr/edit/master/data/places.json"
           >
-            Ajouter un lieu
+            {isLargerThan800 ? "Ajouter un lieu" : "+"}
           </Button>
           <Input
             type="datetime-local"
             value={searchParams.get("date") || ""}
             onChange={onChangeDate}
-            maxW={64}
+            maxW={["200px", "300px"]}
           />
           {showResetButton && (
             <IconButton
