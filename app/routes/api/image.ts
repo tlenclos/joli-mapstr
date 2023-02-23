@@ -5,7 +5,7 @@ import { sharpTransformer } from "remix-image-sharp";
 const config: LoaderConfig = {
   selfUrl:
     process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
+      ? "http://localhost:3001"
       : "https://joli-mapstr.vercel.app/",
   transformer: sharpTransformer,
   cache: new MemoryCache(),
