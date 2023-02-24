@@ -143,6 +143,7 @@ export default function Index() {
           <Button
             as="a"
             href="https://github.com/tlenclos/joli-mapstr/edit/master/data/places.json"
+            px={isLargerThan800 ? 8 : undefined}
           >
             {isLargerThan800 ? "Ajouter un lieu" : "+"}
           </Button>

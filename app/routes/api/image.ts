@@ -12,6 +12,8 @@ const config: LoaderConfig = {
   redirectOnFail: true,
 };
 
-export const loader: LoaderFunction = ({ request }) => {
-  return imageLoader(config, request);
+export const loader: LoaderFunction = async ({ request }) => {
+  const response = await imageLoader(config, request);
+  response.headers.set('Cache-control', 'public, max-age=31536000, immutable')
+  return response;
 };
