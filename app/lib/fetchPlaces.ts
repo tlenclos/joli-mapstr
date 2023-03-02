@@ -16,7 +16,12 @@ function isOpenInRange(range: string, date: Date = defaultDateWithTimezone): boo
     .split(" to ")
     .map((hours) => parseDate(hours, "kk:mm", date));
 
+
   if (dateRange.length === 2) {
+    if (dateRange[1] < dateRange[0]) {
+      dateRange[1].setDate(dateRange[1].getDate() + 1);
+    }
+
     return dateRange[0] <= date && date <= dateRange[1];
   }
 
