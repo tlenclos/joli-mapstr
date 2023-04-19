@@ -97,11 +97,15 @@ await Promise.all(
       timeByFoot: timeByFootValue,
       images: await Promise.all(
         place.images.map(async (image: string, index: number) => {
+          if (image.length <= 10) {
+            return null;
+          }
+
           const imageName = `${index}-${place.placeId}.jpg`;
           await downloadFile(image, `../public/images/${imageName}`);
           return imageName;
         })
-      ),
+      ).then((images) => images.filter((a) => a)),
     };
   })
 );
